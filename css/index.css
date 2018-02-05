@@ -1,0 +1,687 @@
+body {
+  background: #F8F8F8;
+  font: 14px PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+  overflow: auto;
+}
+a {
+  color: #616161;
+  text-decoration: none;
+}
+a:hover {
+  color: #DB7B0D;
+  text-decoration: none;
+}
+ul,
+ol,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gt {
+  float: right;
+}
+.lf {
+  float: left;
+}
+.content {
+  margin: 0 auto;
+  width: 1200px;
+  min-height: 600px;
+  padding: 0 20px;
+  background: #fff;
+}
+input:focus {
+  outline: none;
+}
+form.sui-form input[type="text"] {
+  font-size: 14px;
+}
+input::-webkit-input-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input:-moz-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input::-moz-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input:-ms-input-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+.sui-form input[type="text"] {
+  box-shadow: none;
+  color: #333333;
+  font-family: 14px PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+}
+.datepicker {
+  cursor: pointer;
+  position: absolute;
+  width: 258px;
+  height: 258px;
+  background: #fff;
+  border: 1px solid #DDDDDD;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
+  border-radius: 2px;
+}
+.datepicker .table-condensed {
+  width: 258px;
+  height: 258px;
+  padding: 15px;
+}
+.datepicker .datepicker-switch {
+  color: #475669;
+}
+.datepicker .dow {
+  color: #8492A6;
+}
+.datepicker .day {
+  text-align: center;
+}
+.datepicker .today {
+  color: #fff;
+  background: #ED9127;
+  width: 32px;
+  height: 32px;
+}
+.datepicker .today:hover {
+  background: #DB7B0D;
+}
+.datepicker .prev,
+.datepicker .next {
+  display: block;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  position: relative;
+}
+.datepicker .prev {
+  border-right: 8px solid #bcbcbc;
+  left: 8px;
+}
+.datepicker .next {
+  border-left: 8px solid #bcbcbc;
+  right: -12px;
+}
+.datepicker .datepicker-months span,
+.datepicker .datepicker-years span {
+  display: inline-block;
+  width: 55px;
+  line-height: 5;
+}
+.datepicker .datepicker-months .table-condensed td,
+.datepicker .datepicker-years .table-condensed td {
+  position: relative;
+  left: 12px;
+}
+.input-daterange img {
+  position: relative;
+  right: 30px;
+}
+.input-daterange .agentBegin {
+  right: 90px;
+}
+.dropdown-inner span {
+  color: #333333;
+  font-size: 14px;
+}
+header {
+  margin-top: 50px;
+  height: 58px;
+  border-bottom: 1px solid #DDDDDD;
+  border-top: 1px solid transparent;
+}
+header h1 {
+  font-size: 20px;
+  margin: 30px 0 8px 0;
+  line-height: 1;
+}
+header div a {
+  display: inline-block;
+  border-radius: 4px;
+  width: 90px;
+  height: 32px;
+  padding: 6px 15px;
+  margin: 18px 0 8px 0;
+  background: #F8F8F8;
+  border: 1px solid #DDDDDD;
+  color: #333333;
+  font-size: 14px;
+}
+header div a:first-child {
+  margin-right: 20px;
+}
+header div a.active {
+  border: 1px solid #ED9127;
+  color: #ED9127;
+  font-size: 14px;
+  background: #fff;
+}
+section p {
+  height: 36px;
+  line-height: 36px;
+}
+section p a {
+  font-size: 12px;
+}
+section p a:hover {
+  color: #ED9127;
+}
+section li.active a {
+  color: #ED9127;
+}
+section li.title {
+  font-weight: bold;
+}
+section div {
+  background: #F8F8F8;
+}
+section div ul li {
+  float: left;
+  margin: 10px 25px 0 0;
+}
+section div ul li a {
+  font-size: 14px;
+  cursor: pointer;
+}
+section div ul li:first-child {
+  margin-left: 10px;
+}
+section div p {
+  text-align: center;
+}
+section div p a {
+  font-size: 12px;
+  cursor: pointer;
+  color: #BABABA;
+}
+section #more {
+  display: none;
+}
+section #more #btn {
+  width: 90px;
+  height: 36px;
+  outline: none;
+  background: #F2F2F2;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+}
+section #more .input-daterange img {
+  right: 0;
+}
+section #more .total {
+  margin-left: 68px;
+  margin-top: 16px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  min-height: 40px;
+  background: #fff;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  display: none;
+}
+section #more .total #borough {
+  margin-top: -10px;
+  width: 960px;
+}
+section #more #limit {
+  margin-top: -10px;
+  margin-left: 5px;
+}
+section #more #limit li.all {
+  margin-left: -5px;
+}
+section #more .dropdown-inner {
+  width: 122px;
+  height: 36px;
+  line-height: 30px;
+  background: #fff;
+}
+section #more .dropdown-inner span,
+section #more .dropdown-inner i {
+  color: #BEBEBE;
+  font-size: 12px;
+}
+section #more .dropdown-inner .caret {
+  line-height: 2.5;
+}
+section #more .dropdown-inner li.active > a {
+  background-color: #ED9127;
+}
+section #more .dropdown-inner .sui-dropdown-menu > li > a:hover {
+  color: #fff !important;
+  background: #ED9127 !important;
+}
+section #more .whr {
+  position: relative;
+}
+section #more .whr #WeiHuRen input {
+  width: 120px;
+  height: 36px;
+  padding-left: 10px;
+  padding-right: 20px;
+  border: 1px solid #ccc;
+}
+section #more .whr .caret {
+  position: relative;
+  right: 22px;
+  bottom: -15px;
+}
+section #more .whr #menu12 {
+  display: none;
+  overflow: auto;
+  width: 120px;
+  border-radius: 0 0 2px 2px;
+  position: absolute;
+  background-color: #fff;
+  z-index: 9;
+  max-height: 300px;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  left: 77px;
+  top: 49px;
+}
+section #more .whr #menu12 p {
+  overflow: hidden;
+  cursor: pointer;
+}
+section #more .whr #menu12 p:hover {
+  color: #fff;
+  background: #ED9127;
+}
+section #more .whr #menu12 p.active {
+  color: #fff;
+  background: #ED9127;
+}
+section #more li.wh {
+  height: 36px;
+  line-height: 36px;
+}
+section #more div.controls {
+  height: 36px;
+  line-height: 36px;
+}
+section #more div.controls input {
+  width: 120px;
+  height: 36px;
+  padding-left: 10px;
+}
+section #more div.controls span {
+  margin: 0 12px 0 0;
+}
+section #more div.controls a.caret {
+  position: relative;
+  left: -25px;
+}
+section #plate {
+  display: none;
+  width: 590px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  min-height: 40px;
+  background: #fff;
+  position: absolute;
+  left: 270px;
+  top: 249px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  z-index: 5;
+}
+section #plate #plateTotal {
+  margin-top: -10px;
+  width: 580px;
+}
+section #plate > ul > li {
+  float: left;
+  margin-right: 15px;
+}
+section #plate > ul > li span {
+  color: #ED9127;
+  margin-right: 5px;
+}
+section #plate > ul > li > a:last-child {
+  margin-left: 15px;
+}
+section #plate > ul > li:first-child {
+  margin-left: 0;
+}
+section #plate > img {
+  position: absolute;
+  top: 12px;
+  left: -12px;
+}
+section #plate > img.caret-right {
+  display: none;
+  left: 584px;
+}
+li.group {
+  font-weight: bold;
+}
+#search {
+  height: 56px;
+  background: #fff;
+}
+#search .btns a {
+  display: inline-block;
+  width: 90px;
+  height: 32px;
+  font-size: 14px;
+  padding: 6px 3px;
+  color: #fff;
+  background: #ED9127;
+  margin: 12px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#search .btns a:hover {
+  background: #DB7B0D;
+}
+#search .btns a:first-child {
+  margin-right: 10px;
+}
+#search .input-append {
+  margin: 10px 0;
+  width: 300px;
+  border-radius: 4px;
+}
+#search .input-append input {
+  width: 264px;
+  height: 36px;
+  line-height: 36px;
+  vertical-align: middle;
+  border-radius: 4px 0 0 4px;
+}
+#search .input-append span {
+  display: inline-block;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  line-height: 25px;
+  background: #FCFBF9;
+  border-radius: 0 4px 4px 0;
+}
+#search #modal {
+  z-index: 15;
+  background-color: rgba(153, 153, 153, 0.75);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+#search #modal #main-area {
+  width: 540px;
+  min-height: 400px;
+  border-top: 4px solid #ED9127;
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+}
+#search #modal #main-area h1 {
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 17px;
+  text-align: left;
+  border-bottom: 1px solid #DDDDDD;
+}
+#search #modal #main-area .contain {
+  padding: 10px;
+}
+#search #modal #main-area .contain #searchCity {
+  display: none;
+  cursor: pointer;
+}
+#search #modal #main-area .contain p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+#search #modal #main-area .contain .textarea {
+  display: none;
+  width: 100%;
+  height: 78px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+#search #modal #main-area .contain .textarea a {
+  border: 1px solid rgba(237, 145, 39, 0.13);
+  color: #ED9127;
+  font-size: 12px;
+  border-radius: 4px;
+  background: rgba(237, 145, 39, 0.12);
+  display: inline-block;
+  min-width: 73px;
+  height: 24px;
+  line-height: 12px;
+  padding: 5px 0 7px 6px;
+  margin: 10px 0 0 10px;
+}
+#search #modal #main-area .contain .textarea a b {
+  font-size: 14px;
+  margin-right: 4px;
+}
+#search #modal #main-area .contain .textarea a b img {
+  top: -1px;
+  right: 0;
+}
+#search #modal #main-area .contain .btns {
+  text-align: center;
+}
+#search #modal #main-area .contain .btns a {
+  display: inline-block;
+  width: 70px;
+  height: 26px;
+  line-height: 13px;
+  text-align: center;
+  background: #ED9127;
+  border-radius: 4px;
+  border: 1px solid #ED9127;
+  color: #fff;
+  font-size: 14px;
+}
+#search #modal #main-area .contain .btns a.submit:hover {
+  background: #DB7B0D;
+}
+#search #modal #main-area .contain .btns a:last-child {
+  border: 1px solid #DDDDDD;
+  color: #BABABA;
+  font-size: 14px;
+  background: #F8F8F8;
+  margin-left: 43px;
+}
+#search #modal #main-area .contain ul {
+  width: 250px;
+  height: 151px;
+  border: 1px solid #DDDDDD;
+  overflow: auto;
+}
+#search #modal #main-area .contain ul li {
+  height: 36px;
+  line-height: 36px;
+  padding-left: 10px;
+}
+#search #modal #main-area .contain ul li:hover {
+  background: #ED9127;
+  color: #fff;
+}
+#search #modal #main-area .contain ul li.active {
+  background: #ED9127;
+  color: #fff;
+}
+#search #modal #main-area .contain ul.person {
+  height: 222px;
+  overflow: auto;
+  margin-right: 20px;
+  cursor: pointer;
+}
+#search #modal #main-area .contain .sui-form {
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+#search #modal #main-area .contain .sui-form .input-append {
+  width: 250px;
+}
+#search #modal #main-area .contain .sui-form .input-append input {
+  width: 213px;
+}
+#items {
+  position: relative;
+  top: -18px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background: #fff;
+  border: 1px solid #DDDDDD;
+}
+#items tr {
+  height: 50px;
+  border-bottom: 1px solid #DDDDDD;
+}
+#items tr:last-child {
+  border-bottom: none;
+}
+#items thead tr {
+  height: 51px;
+}
+#items thead th {
+  line-height: 2.1;
+  font-size: 16px;
+  border-right: 1px solid #DDDDDD;
+  vertical-align: middle;
+}
+#items thead th .up-img {
+  position: relative;
+  bottom: 5px;
+  left: 22px;
+}
+#items thead th .down-img {
+  position: relative;
+  top: 5px;
+}
+#items thead th:first-child {
+  width: 245px;
+}
+#items thead th:first-child span {
+  color: #ED9127;
+}
+#items thead th:last-child {
+  border-right: none;
+}
+#items tbody .stars img {
+  margin-right: 0;
+}
+#items tbody .states {
+  max-width: 220px;
+  line-height: 2;
+}
+#items tbody .states > a {
+  border-radius: 2px;
+}
+#items tbody td {
+  font-size: 14px;
+  border-right: 1px solid #DDDDDD;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+#items tbody td p {
+  color: #BABABA;
+  font-size: 12px;
+}
+#items tbody td:first-child {
+  width: 305px;
+  cursor: auto;
+}
+#items tbody td:first-child div.gt div.stars {
+  margin-bottom: 5px;
+  text-align: right;
+}
+#items tbody td:first-child div.gt a {
+  margin-left: 10px;
+  padding: 1px 2px;
+  border: 1px solid #ED9127;
+  color: #ED9127;
+  font-size: 10px;
+}
+#items tbody td:first-child div.gt a:last-child {
+  border: 1px solid #90C46C;
+  color: #90C46C;
+  font-size: 10px;
+}
+#items tbody td:last-child {
+  border-right: none;
+}
+#items tbody tr:nth-child(2n-1) {
+  background: #F8F8F8;
+}
+#pages {
+  min-height: 92px;
+}
+#pages li {
+  float: left;
+  height: 28px;
+  line-height: 26px;
+  text-align: center;
+}
+#pages li a {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 13px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #DDDDDD;
+  border-left: none;
+  color: #333333;
+  border-color: #DDDDDD;
+}
+#pages li #pageNum > li > a:hover {
+  color: #fff;
+  background: #ED9127;
+  border-color: #ED9127;
+}
+#pages li #pageNum > li.active > a:hover {
+  background: #DB7B0D;
+}
+#pages li.prev > a {
+  border-left: 1px solid #DDDDDD;
+}
+#pages li.active a {
+  color: #fff;
+  background: #ED9127;
+  border-color: #ED9127;
+}
+#pages li.disabled a {
+  background: #EEEEEE;
+  color: #DDDDDD;
+}

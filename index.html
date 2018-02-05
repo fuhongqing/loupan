@@ -1,0 +1,244 @@
+<!--<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=7;IE=9" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>楼盘开发</title>
+    <link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="icon">
+    <link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/3.2.1/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+    <!--<link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui-append.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<!--<%@ include file="head.jsp" %>-->
+    <div class="content clear">
+            <!--楼盘搜索-->
+            <header>
+                <div class="gt">
+                    <!--鼠标点击，通过active类来切换选中按钮-->
+                    <a href="#" class="active">列表模式</a><a href="./propertyMap.html">地图模式</a>
+                </div>
+                <h1>楼盘搜索</h1>
+            </header>
+            <!--条件列表-->
+            <section>
+                <p><a href="http://www.xtco.cn/">轩天实业&gt;</a><a href="index.jsp">项目开发</a></p>
+                <div>
+                    <!--鼠标点击，通过active类来切换选中按钮-->
+                    <ul id="BuildingType" class="clear">
+                        <li class="title"><a>类型：</a></li>
+                        <li class="active all"><a>不限</a></li>
+                        <li><a id="0">公寓</a></li>
+                        <li><a id="1">别墅</a></li>
+                        <li><a id="5">商业</a></li>
+                        <li><a id="6">住宅</a></li>
+                        <li><a id="7">其他</a></li>
+                    </ul>
+                    <ul id="SalePoint" class="clear">
+                        <li class="title"><a>级别：</a></li>
+                        <li class="active all"><a>不限</a></li>
+                        <li><a>四星</a></li>
+                        <li><a>三星</a></li>
+                        <li><a>二星</a></li>
+                        <li><a>一星</a></li>
+                    </ul>
+                    <ul id="FollowType" class="clear">
+                        <li class="title"><a>跟进：</a></li>
+                        <li class="active all"><a>不限</a></li>
+                        <li><a>待扫盘</a></li>
+                        <li><a>扫盘中</a></li>
+                        <li><a>维护中</a></li>
+                        <li><a>已提报</a></li>
+                        <li><a>商务谈判</a></li>
+                        <li><a>合同签订</a></li>
+                        <li><a>无效盘</a></li>
+                    </ul>
+                    <!--展开更多-->
+                    <div id="more">
+                        <ul class="clear cities">
+                            <li class="title"><a href="#">地区：</a></li>
+                            <li>
+                                <ul id="limit" class="clear">
+                                    <!--动态添加-->
+                                </ul>
+                            </li>
+                            <li class="extend"><a href="#" id="bb">更多</a></li>
+                        </ul>
+                        <ul class="clear total">
+                            <li>
+                                <ul id="borough" class="clear">
+                                    <!--动态生成-->
+                                </ul>
+                            </li>
+                            <li id="plate">
+                                <img class="caret-left" src="./res/caret-left.png" alt=""/>
+                                <img class="caret-right" src="./res/caret-right.png" alt=""/>
+                                <ul class="clear">
+                                    <li>
+                                        <ul id="plateTotal" class="clear">
+                                            <!--动态生成-->
+                                            <!--<li><a href="#"><span>D</span>大宁</a><a href="#">大悦城</a></li>-->
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul id="SoldState" class="clear">
+                            <li class="title"><a href="#">状态：</a></li>
+                            <li class="active all"><a href="#">不限</a></li>
+                            <li><a href="#">在建</a></li>
+                            <li><a href="#">在售</a></li>
+                            <li><a href="#">滞销</a></li>
+                            <li><a href="#">售罄</a></li>
+                            <li><a href="#">待开盘</a></li>
+                        </ul>
+                        <ul id="DealMoney" class="clear">
+                            <li class="title"><a href="#">货值：</a></li>
+                            <li class="active all"><a href="#">不限</a></li>
+                            <li><a href="#">1亿以内</a></li>
+                            <li><a href="#">1-3亿</a></li>
+                            <li><a href="#">3-10亿</a></li>
+                            <li><a href="#">10亿以上</a></li>
+                        </ul>
+                        <ul class="clear whr">
+                            <li class="wh title"><a href="#">维护：</a></li>
+                            <li>
+                                <div id="WeiHuRen">
+                                    <img class="caret gt" src="./res/down-disabled.png" alt=""/>
+                                    <input type="text" id="" placeholder="请选择"/>
+                                </div>
+                                <div id="menu12">
+                                      <!--动态生成维护人-->
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="clear">
+                            <li class="wh title"><a href="#">时间：</a></li>
+                            <li>
+                                <form action="" class="sui-form">
+                                    <div data-toggle="datepicker" class="control-group input-daterange">
+                                        <div class="controls">
+                                            <input type="text" id="WeiHuShiJian_start" class="input-medium" data-toggle="datepicker" placeholder="请选择">
+                                            <a class="caret"><img src="./res/down-disabled.png" alt=""/></a><span>至</span>
+                                            <input type="text" id="WeiHuShiJian_end" class="input-medium " placeholder="请选择">
+                                            <a class="caret"><img src="./res/down-disabled.png" alt=""/></a>
+                                            <button id="btn">确定</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    <p><a id="aa" class="moreDown">展开选项<img src="./res/angle-double-down.png" alt=""/></a></p>
+                </div>
+            </section>
+            <!--搜索框和按钮-->
+            <div id="search">
+                <form class="sui-form gt">
+                    <div class="input-append">
+                        <input id="appendedInput" type="text" class="span2 input-fat" placeholder="请输入楼盘名或地址进行搜索">
+                        <span class="add-on"><img src="./res/search.png" alt=""/></span>
+                    </div>
+                </form>
+                <div class="btns"><a href="add.html">新增开发楼盘</a><a>设置主营区域</a></div>
+                <!--设置主营区域-->
+                <div id="modal">
+                    <div id="main-area">
+                        <h1>主营区域设置</h1>
+                        <div class="contain">
+                            <p>请选择组别或人员</p>
+                            <div class="gt">
+                                <form class="sui-form">
+                                    <div class="input-append">
+                                        <input id="appended" type="text" class="span2 input-fat" placeholder="地区/区域/板块关键字">
+                                        <span class="add-on"><img src="./res/search.png" alt=""/></span>
+                                    </div>
+                                </form>
+                                <ul id="searchCity" class="cities">
+                                    <!--动态添加-->
+                                </ul>
+                            </div>
+                            <ul class="person">
+                                <!--动态生成-->
+                            </ul>
+                            <div class="textarea">
+                                <!--<a href="#"><span>松江</span><b>&times;</b></a>-->
+                            </div>
+                            <div class="btns">
+                                <a href="#" class="submit">提交</a><a href="#">取消</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--项目列表-->
+            <table id="items" class="sui-table">
+                <thead>
+                    <tr>
+                     <th id="floorCount"><!--动态生成--></th>
+                     <th>区域</th>
+                     <th>
+                         <div class="gt follow">
+                             <img class="up-img" src="./res/up-disabled-a.png" alt=""/>
+                             <img class="down-img" src="./res/down-disabled.png" alt=""/>
+                         </div>
+                         状态
+                     </th>
+                     <th>
+                         <div class="gt count">
+                             <img class="up-img" src="./res/up-disabled-a.png" alt=""/>
+                             <img class="down-img" src="./res/down-disabled.png" alt=""/>
+                         </div>
+                         剩余体量
+                     </th>
+                     <th>
+                         <div class="gt material">
+                             <img class="up-img" src="./res/up-disabled-a.png" alt=""/>
+                             <img class="down-img" src="./res/down-disabled.png" alt=""/>
+                         </div>
+                         剩余货值
+                     </th>
+                     <th>去化周期</th>
+                     <th>销售类型</th>
+                     <th>
+                         <div class="gt protect">
+                             <img class="up-img" src="./res/up-disabled-a.png" alt=""/>
+                             <img class="down-img" src="./res/down-disabled.png" alt=""/>
+                         </div>
+                         最近维护
+                     </th>
+                     <th>维护人</th>
+                 </tr>
+                </thead>
+                <tbody>
+                <!--动态生成-->
+                </tbody>
+            </table>
+        <!--分页器-->
+        <div id="pages" class="clear">
+            <ul class="gt">
+                <li class="prev disabled"><a href="#">&lt;</a></li>
+                <li>
+                    <ul id="pageNum">
+                        <!--动态生成-->
+                    </ul>
+                </li>
+                <li class="next gt"><a href="#">&gt;</a></li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
+    <!--<script type="text/javascript" src="http://loupan.ehaofangwang.com/ehaofang-pmweb/pages/js/jquery-1.10.2.min.js"></script>-->
+    <!--<script type="text/javascript" src="http://loupan.ehaofangwang.com/ehaofang-pmweb/pages/js/index.js"></script>-->
+    <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>

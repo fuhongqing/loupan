@@ -1,0 +1,474 @@
+<!--<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=7;IE=9" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>楼盘详情</title>
+    <link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="icon">
+    <link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/3.2.1/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/detail.css"/>
+</head>
+<body>
+<!--<%@ include file="head.jsp" %>-->
+<!--内容区-->
+<div class="content">
+    <!--标题-->
+    <h2>楼盘详情</h2>
+    <!--头部导航-->
+    <header>
+        <div id="contacts" class="gt">
+            <div class="grid-demo">
+                <div class="sui-row-fluid">
+                    <div class="span8"><h1>项目联系人</h1></div>
+                    <div class="span4 btn btn-update"><a href="#" data-toggle="modal" data-target="#myModal6" data-keyboard="false">新增</a></div>
+                    <!--模态框-->
+                    <div id="myModal6" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+                        <div class="bar"></div>
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close cancel">×</button>
+                                    <h4  class="modal-title">新增项目联系人</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="grid-demo">
+                                        <div id="project-m6">
+                                            <form class="sui-form form-horizontal">
+                                                <div class="control-group">
+                                                    <label class="control-label">职位</label>
+                                                    <div class="controls gt">
+                                                        <span class="sui-dropdown dropdown-bordered select">
+                                                                          <span class="dropdown-inner" id="posit">
+                                                                                    <a  role="button" data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                                                                        <img src="./res/star.png" alt="" class="gt"/>
+                                                                                        <input id="positions" name="state" type="hidden"><i class="caret"></i><span>请选择</span>
+                                                                                    </a>
+                                                                              <ul  id="positionsMenu" role="menu"  class="sui-dropdown-menu">
+                                                                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="销售员">销售员</a></li>
+                                                                                  <li role="presentation" ><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="销售经理">销售经理</a></li>
+                                                                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="营销总">营销总</a></li>
+                                                                                  <li role="presentation" ><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="项目总经理">项目总经理</a></li>
+                                                                                  <li role="presentation" ><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="股东">股东</a></li>
+                                                                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="董事长">董事长</a></li>
+                                                                                  <li role="presentation" ><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="其他">其他</a></li>
+                                                                              </ul></span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="control-group">
+                                                    <label class="control-label">联系人</label>
+                                                    <div class="controls">
+                                                        <input id="contactPerson" type="text" placeholder="请输入内容">
+                                                    </div>
+                                                    <img src="./res/star.png" alt=""/>
+                                                </div>
+                                                <div class="control-group">
+                                                    <label class="control-label">联系电话</label>
+                                                    <div class="controls">
+                                                        <input id="phone" type="text"  placeholder="请输入内容">
+                                                    </div>
+                                                    <img src="./res/star.png" alt=""/>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" data-ok="modal" class="sui-btn modify">修改</button>
+                                    <button type="button" data-dismiss="modal" class="sui-btn cancel">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-demo person">
+                <!--动态生成-->
+            </div>
+            <div class="grid-demo">
+                <div class="sui-row-fluid">
+                    <div class="span4"><h4>当前维护人：</h4></div>
+                    <div class="span4"><h4 id="whr"></h4></div>
+                    <div class="span4 look look1"><a href="#" data-toggle="modal" data-target="#myModal7" data-keyboard="false" >维护</a></div>
+                    <!--模态框-->
+                    <div id="myModal7" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+                        <div class="bar"></div>
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close cancel">×</button>
+                                    <h4  class="modal-title">当前维护人</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="grid-demo">
+                                        <div id="project-m7">
+                                            <form class="sui-form form-horizontal">
+                                                <div class="control-group">
+                                                    <label class="control-label">姓名</label>
+                                                    <div class="controls gt">
+                                                        <span class="sui-dropdown dropdown-bordered select">
+                                                                          <span class="dropdown-inner">
+                                                                                    <a  role="button" data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                                                                        <input id="weihu" name="state" type="hidden"><i class="caret"></i><span>请选择</span>
+                                                                                    </a>
+                                                                              <ul  id="weihuMenu" role="menu"  class="sui-dropdown-menu">
+                                                                                  <!--动态生成-->
+                                                                              </ul></span></span>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" data-ok="modal" class="sui-btn modify">修改</button>
+                                    <button type="button" data-dismiss="modal" class="sui-btn cancel">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="project">
+            <!--头部导航-->
+            <p><a href="http://www.xtco.cn/">轩天实业&gt;</a><a href="./index.jsp">楼盘&gt;</a><a href="add.jsp">新增开发&gt;</a><a href="#">土地开发详情</a></p>
+            <div id="project-detail" class="grid-demo">
+                <!--动态生成-->
+            </div>
+            <div class="grid-demo">
+                <div class="sui-row-fluid">
+                    <div class="span11 btn-update">
+                        <a href="#" data-toggle="modal" data-target="#myModal5" data-keyboard="false">修改</a>
+                    </div>
+                    <!--模态框-->
+                    <div id="myModal5" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+                        <div class="bar"></div>
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close cancel">×</button>
+                                    <h4  class="modal-title">基本信息</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <!--动态生成-->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" data-ok="modal" class="sui-btn modify">修改</button>
+                                    <button type="button" data-dismiss="modal" class="sui-btn cancel">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+<div class="content">
+    <!--详情-->
+    <section>
+        <!--体量-->
+        <h2>体量</h2>
+        <div class="grid-demo">
+            <div class="btn-update gt"><a href="#" data-toggle="modal" data-target="#myModal" data-keyboard="false">修改</a></div>
+            <!--模态框-->
+            <div id="myModal" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+                <div class="bar"></div>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close cancel">×</button>
+                            <h4  class="modal-title">体量</h4>
+                        </div>
+                        <div class="modal-body">
+                            <!--动态生成-->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-ok="modal" class="sui-btn modify">修改</button>
+                            <button type="button" data-dismiss="modal" class="sui-btn cancel">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="count">
+                <!--动态生成-->
+            </div>
+        </div>
+        <!--销售信息-->
+        <h2>销售信息</h2>
+        <div class="grid-demo">
+            <div class="btn-update gt"><a href="#" data-toggle="modal" data-target="#myModal1" data-keyboard="false">修改</a></div>
+            <!--模态框-->
+            <div id="myModal1" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+                <div class="bar"></div>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close cancel">×</button>
+                            <h4  class="modal-title">销售信息</h4>
+                        </div>
+                        <div class="modal-body">
+                            <!--动态生成-->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-ok="modal" class="sui-btn modify">修改</button>
+                            <button type="button" data-dismiss="modal" class="sui-btn cancel">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="market">
+                <!--动态生成-->
+            </div>
+        </div>
+        <!--合作情况-->
+        <h2>合作情况</h2>
+        <div class="grid-demo">
+            <div class="btn-update gt"><a href="#" data-toggle="modal" data-target="#myModal2" data-keyboard="false">修改</a></div>
+            <!--模态框-->
+            <div id="myModal2" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+                <div class="bar"></div>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close cancel">×</button>
+                            <h4  class="modal-title">合作情况</h4>
+                        </div>
+                        <div class="modal-body">
+                            <!--动态生成-->
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-ok="modal" class="sui-btn modify">修改</button>
+                            <button type="button" data-dismiss="modal" class="sui-btn cancel">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="coop">
+                <!--动态生成-->
+            </div>
+        </div>
+        <!--土地情况-->
+        <h2>土地情况</h2>
+        <div class="grid-demo">
+            <div class="btn-update gt"><a href="#" data-toggle="modal" data-target="#myModal3" data-keyboard="false">修改</a></div>
+            <!--模态框-->
+            <div id="myModal3" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+                <div class="bar"></div>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close cancel">×</button>
+                            <h4  class="modal-title">土地情况</h4>
+                        </div>
+                        <div class="modal-body">
+                            <!--动态生成-->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-ok="modal" class="sui-btn modify">修改</button>
+                            <button type="button" data-dismiss="modal" class="sui-btn cancel">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="land">
+                <!--动态生成-->
+            </div>
+        </div>
+        <!--楼盘详情-->
+        <h2>楼盘详情</h2>
+        <div class="grid-demo">
+            <div class="btn-update gt"><a href="#" data-toggle="modal" data-target="#myModal4" data-keyboard="false">修改</a></div>
+            <!--模态框-->
+            <div id="myModal4" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+                <div class="bar"></div>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close cancel">×</button>
+                            <h4  class="modal-title">楼盘详情</h4>
+                        </div>
+                        <div class="modal-body">
+                            <!--动态生成-->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-ok="modal" class="sui-btn modify">修改</button>
+                            <button type="button" data-dismiss="modal" class="sui-btn cancel">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="floor">
+                <!--动态生成-->
+            </div>
+        </div>
+    </section>
+</div>
+<div id="records" class="content clear">
+    <!--跟进记录-->
+    <h2>跟进记录</h2>
+    <div id="follow">
+        <div class="sui-row-fluid">
+            <div class="span2">项目跟进阶段</div>
+            <div class="span2">
+                <form class="sui-form form-horizontal">
+                    <div class="control-group">
+                        <div class="controls">
+                            <span class="sui-dropdown dropdown-bordered select">
+                                  <span class="dropdown-inner">
+                                            <a  role="button" data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                                <input id="IntentionType" name="state" type="hidden"><i class="caret"></i><span class="state">请选择</span>
+                                            </a>
+                                      <ul  id="stateMenu" role="menu"  class="sui-dropdown-menu">
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="请选择">请选择</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="了解基本情况">了解基本情况</a></li>
+                                          <li role="presentation" ><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="关系维护">关系维护</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="准备提报">准备提报</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="已提报">已提报</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="商务谈判">商务谈判</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="合同签订">合同签订</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="无效盘">无效盘</a></li>
+                                      </ul></span></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="span2">跟进形式</div>
+            <div class="span2">
+                <form class="sui-form form-horizontal">
+                    <div class="control-group">
+                        <div class="controls">
+                            <span class="sui-dropdown dropdown-bordered select">
+                                  <span class="dropdown-inner">
+                                            <a  role="button" data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                                <input id="UserType" type="hidden"><i class="caret"></i><span class="follow">请选择</span>
+                                            </a>
+                                      <ul  id="followTypes" role="menu"  class="sui-dropdown-menu">
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="请选择">请选择</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="微信">微信</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="电话">来电</a></li>
+                                          <li role="presentation" ><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="面谈">面谈</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="其他">其他</a></li>
+                                      </ul></span></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="span2">跟进对象</div>
+            <div class="span2">
+                <form class="sui-form form-horizontal">
+                    <div class="control-group">
+                        <div class="controls">
+                            <span class="sui-dropdown dropdown-bordered select">
+                                  <span class="dropdown-inner">
+                                            <a  role="button" data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                                <input id="FollowType" name="followObject" type="hidden"><i class="caret"></i><span class="job">请选择</span>
+                                            </a>
+                                      <ul  id="followObject" role="menu"  class="sui-dropdown-menu">
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="请选择">请选择</a></li>
+                                          <li role="presentation" ><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="销售员">销售员</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="销售经理">销售经理</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="营销总">营销总</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="项目总经理">项目总经理</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="股东">股东</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="董事长">董事长</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="其他">其他</a></li>
+                                      </ul></span></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="sui-row-fluid">
+        <div class="span8">
+            <textarea  id="Maintainlog" required cols="30" rows="10" placeholder="请输入内容..."></textarea>
+        </div>
+    </div>
+    <p class="btn gt">
+        <input type="file" id="btn-file" name="file" accept="*/*"/>
+        <a href="#" class="load">上传附件</a>
+        <a href="#">提交</a>
+    </p>
+</div>
+<div id="types">
+    <div class="sui-row">
+        <div class="span2">跟进形式</div>
+        <div class="span2">
+            <form class="sui-form form-horizontal">
+                <div class="control-group">
+                    <div class="controls">
+                            <span class="sui-dropdown dropdown-bordered select">
+                                  <span class="dropdown-inner">
+                                            <a  role="button" data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                                <input value="xz" name="state" type="hidden"><i class="caret"></i><span>全部</span>
+                                            </a>
+                                      <ul  role="menu" id="followTypes1" class="sui-dropdown-menu">
+                                          <li role="presentation" ><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="bf">微信</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="dh">来电</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="wx">面谈</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="qt">其他</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="qt">全部</a></li>
+                                      </ul></span></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="span2">跟进对象</div>
+        <div class="span2">
+            <form class="sui-form form-horizontal">
+                <div class="control-group">
+                    <div class="controls">
+                            <span class="sui-dropdown dropdown-bordered select">
+                                  <span class="dropdown-inner">
+                                            <a  role="button" data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                                <input value="xz" name="state" type="hidden"><i class="caret"></i><span>全部</span>
+                                            </a>
+                                      <ul  role="menu" id="FollowType1" class="sui-dropdown-menu">
+                                          <li role="presentation" ><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="xsy">销售员</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="xsjl">销售经理</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="yxz">营销总</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="xmjl">项目总经理</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="gd">股东</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="dsz">董事长</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="qt">其他</a></li>
+                                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="qt">全部</a></li>
+                                      </ul></span></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="show" class="content clear">
+   <!--动态生成-->
+</div>
+<!--分页器-->
+<div id="pages" class="content clear">
+    <ul class="gt">
+        <li class="prev disabled"><a href="#">&lt;</a></li>
+        <li>
+            <ul id="pageNum">
+                <!--动态生成-->
+            </ul>
+        </li>
+        <li class="next gt"><a href="#">&gt;</a></li>
+    </ul>
+</div>
+<script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
+<!--<script type="text/javascript" src="http://loupan.ehaofangwang.com/ehaofang-pmweb/pages/js/jquery-1.10.2.min.js"></script>-->
+<!--<script type="text/javascript" src="http://loupan.ehaofangwang.com/ehaofang-pmweb/pages/js/detail.js"></script>-->
+<script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="./js/detail.js"></script>
+</body>
+</html>

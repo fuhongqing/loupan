@@ -1,0 +1,510 @@
+body {
+  background: #F8F8F8;
+  font: 14px PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+  overflow: auto;
+}
+a {
+  color: #616161;
+  text-decoration: none;
+}
+a:hover {
+  color: #DB7B0D;
+  text-decoration: none;
+}
+ul,
+ol,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gt {
+  float: right;
+}
+.lf {
+  float: left;
+}
+.content {
+  margin: 0 auto;
+  width: 1200px;
+  min-height: 600px;
+  padding: 0 20px;
+  background: #fff;
+}
+input:focus {
+  outline: none;
+}
+form.sui-form input[type="text"] {
+  font-size: 14px;
+}
+input::-webkit-input-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input:-moz-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input::-moz-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input:-ms-input-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+.sui-form input[type="text"] {
+  box-shadow: none;
+  color: #333333;
+  font-family: 14px PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+}
+.datepicker {
+  cursor: pointer;
+  position: absolute;
+  width: 258px;
+  height: 258px;
+  background: #fff;
+  border: 1px solid #DDDDDD;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
+  border-radius: 2px;
+}
+.datepicker .table-condensed {
+  width: 258px;
+  height: 258px;
+  padding: 15px;
+}
+.datepicker .datepicker-switch {
+  color: #475669;
+}
+.datepicker .dow {
+  color: #8492A6;
+}
+.datepicker .day {
+  text-align: center;
+}
+.datepicker .today {
+  color: #fff;
+  background: #ED9127;
+  width: 32px;
+  height: 32px;
+}
+.datepicker .today:hover {
+  background: #DB7B0D;
+}
+.datepicker .prev,
+.datepicker .next {
+  display: block;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  position: relative;
+}
+.datepicker .prev {
+  border-right: 8px solid #bcbcbc;
+  left: 8px;
+}
+.datepicker .next {
+  border-left: 8px solid #bcbcbc;
+  right: -12px;
+}
+.datepicker .datepicker-months span,
+.datepicker .datepicker-years span {
+  display: inline-block;
+  width: 55px;
+  line-height: 5;
+}
+.datepicker .datepicker-months .table-condensed td,
+.datepicker .datepicker-years .table-condensed td {
+  position: relative;
+  left: 12px;
+}
+.input-daterange img {
+  position: relative;
+  right: 30px;
+}
+.input-daterange .agentBegin {
+  right: 90px;
+}
+.dropdown-inner span {
+  color: #333333;
+  font-size: 14px;
+}
+.content {
+  min-height: 800px;
+}
+.input-daterange img {
+  top: 25px;
+  right: 10px;
+}
+h2 {
+  font-size: 20px;
+  padding: 15px 0 8px 0;
+  margin-top: 50px;
+  text-align: left;
+  border-bottom: 1px solid #DDDDDD;
+}
+h2 span {
+  font-weight: normal;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 14px;
+}
+.dropdown-inner {
+  width: 256px;
+  height: 36px;
+  line-height: 32px;
+}
+.dropdown-inner .caret {
+  position: relative;
+  top: 6px;
+}
+.dropdown-inner li.active > a {
+  background-color: #ED9127;
+}
+.dropdown-inner .sui-dropdown-menu > li > a:hover {
+  color: #fff !important;
+  background: #ED9127 !important;
+}
+header > p {
+  margin: 10px 0;
+}
+header > div {
+  width: 350px;
+}
+header > div h4 {
+  line-height: 70px;
+  height: 56px;
+  font-weight: normal;
+}
+header > h2 > span {
+  color: #ED9127;
+}
+#basic,
+#deal {
+  position: relative;
+  background: #fff;
+  border: 1px solid #DDDDDD;
+}
+#basic tr,
+#deal tr {
+  height: 50px;
+  border-bottom: 1px solid #DDDDDD;
+}
+#basic tr:last-child,
+#deal tr:last-child {
+  border-bottom: none;
+}
+#basic thead a.sui-btn,
+#deal thead a.sui-btn {
+  font-size: 14px;
+  color: #fff;
+  background: #ED9127;
+  border-radius: 4px;
+  display: inline-block;
+  width: 70px;
+  height: 26px;
+  text-align: center;
+  line-height: 21px;
+  border: none;
+}
+#basic thead tr,
+#deal thead tr {
+  height: 51px;
+}
+#basic thead th,
+#deal thead th {
+  line-height: 2.1;
+  font-size: 16px;
+  border-right: 1px solid #DDDDDD;
+  vertical-align: middle;
+}
+#basic thead th .up-img,
+#deal thead th .up-img {
+  position: relative;
+  bottom: 5px;
+  left: 22px;
+}
+#basic thead th .down-img,
+#deal thead th .down-img {
+  position: relative;
+  top: 5px;
+}
+#basic thead th:first-child,
+#deal thead th:first-child {
+  width: 245px;
+}
+#basic thead th:first-child span,
+#deal thead th:first-child span {
+  color: #ED9127;
+}
+#basic thead th:last-child,
+#deal thead th:last-child {
+  border-right: none;
+}
+#basic thead > tr > th > a:hover,
+#deal thead > tr > th > a:hover {
+  background: #DB7B0D;
+}
+#basic tbody span,
+#deal tbody span {
+  width: 255px;
+  text-align: left;
+  height: 18px;
+  line-height: 21px;
+}
+#basic tbody td,
+#deal tbody td {
+  font-size: 14px;
+  border-right: 1px solid #DDDDDD;
+  padding: 5px 8px;
+}
+#basic tbody td p,
+#deal tbody td p {
+  color: #BABABA;
+  font-size: 12px;
+}
+#basic tbody td:first-child,
+#deal tbody td:first-child {
+  width: 245px;
+}
+#basic tbody td:first-child div.gt a,
+#deal tbody td:first-child div.gt a {
+  margin-left: 10px;
+  padding: 1px 2px;
+  border: 1px solid #CB4958;
+  color: #CB4958;
+  font-size: 10px;
+}
+#basic tbody td:first-child div.gt a:nth-child(2),
+#deal tbody td:first-child div.gt a:nth-child(2) {
+  border: 1px solid #ED9127;
+  color: #ED9127;
+  font-size: 10px;
+}
+#basic tbody td:first-child div.gt a:last-child,
+#deal tbody td:first-child div.gt a:last-child {
+  border: 1px solid #7EE6CF;
+  color: #7EE6CF;
+  font-size: 10px;
+}
+#basic tbody td:last-child,
+#deal tbody td:last-child {
+  border-right: none;
+}
+#basic tbody tr:nth-child(2n-1),
+#deal tbody tr:nth-child(2n-1) {
+  background: #F8F8F8;
+}
+#basic tbody h4,
+#deal tbody h4 {
+  color: #B2B2B2;
+}
+#basic tbody > tr > td,
+#deal tbody > tr > td {
+  width: 33.3%;
+}
+#myModal,
+#myModal1 {
+  width: 1050px;
+  height: 475px;
+  left: 27%;
+  overflow: auto;
+}
+#myModal .bar,
+#myModal1 .bar {
+  height: 4px;
+  background: #ED9127;
+}
+#myModal .modal-header,
+#myModal1 .modal-header {
+  margin-top: 20px;
+}
+#myModal .modal-body .dropdown-inner .caret,
+#myModal1 .modal-body .dropdown-inner .caret {
+  color: #BEBEBE;
+}
+#myModal .modal-body .dropdown-inner span,
+#myModal1 .modal-body .dropdown-inner span {
+  color: #333333;
+  font-weight: normal;
+}
+#myModal h4,
+#myModal1 h4 {
+  font-size: 20px;
+}
+#myModal input,
+#myModal1 input {
+  width: 256px;
+  height: 36px;
+  margin-right: 5px;
+}
+#myModal .control-label,
+#myModal1 .control-label {
+  text-align: left;
+  font-size: 14px;
+}
+#myModal .modal-footer,
+#myModal1 .modal-footer {
+  text-align: center;
+  background: #fff;
+  margin-top: -17px;
+  position: relative;
+}
+#myModal .modal-footer > button,
+#myModal1 .modal-footer > button {
+  display: inline-block;
+  width: 70px;
+  height: 26px;
+  line-height: 13px;
+  text-align: center;
+  background: #ED9127;
+  border-radius: 4px;
+  border: 1px solid #ED9127;
+  color: #fff;
+  font-size: 14px;
+}
+#myModal .modify:hover,
+#myModal1 .modify:hover {
+  background: #DB7B0D;
+}
+#myModal .modal-footer > button:last-child,
+#myModal1 .modal-footer > button:last-child {
+  border: 1px solid #DDDDDD;
+  color: #BABABA;
+  font-size: 14px;
+  background: #F8F8F8;
+  margin-left: 43px;
+}
+#myModal1 input {
+  width: 350px;
+}
+#myModal1 .input-daterange {
+  position: relative;
+  bottom: 10px;
+}
+#project2 {
+  width: 554px;
+}
+#project2 .sui-form .areas input {
+  width: 176px;
+  height: 36px;
+  margin-right: -3px;
+}
+#project2 .sui-form .areas input:first-child {
+  margin-right: 46px;
+}
+#project2 .sui-form .areas span {
+  position: relative;
+  right: 190px;
+}
+#project2 .sui-form .control-group {
+  height: 36px;
+}
+#project2 #plotRatio1,
+#project2 #plotRatio2,
+#project2 #buildingDensity1,
+#project2 #buildingDensity2 {
+  width: 102px;
+}
+#project2 span {
+  margin-right: 15px;
+}
+#project2 input {
+  width: 388px;
+}
+#basic-gt .controls {
+  position: relative;
+  left: 9px;
+}
+#basic-gt img {
+  margin-left: 10px;
+}
+#basic-gt .label-first {
+  position: relative;
+  top: 8px;
+}
+#basic-gt > form > div:first-child {
+  margin-bottom: 25px;
+}
+#basic-gt > form > div > label {
+  position: relative;
+  top: 0;
+}
+#deal-gt > form > div:first-child {
+  margin-bottom: 25px;
+}
+#deal-gt > form > div > label {
+  position: relative;
+  top: 0;
+}
+#deal-gt .label-first {
+  position: relative;
+  top: 8px;
+}
+#project3 {
+  width: 554px;
+}
+#project3 .sui-form .dropdown-inner {
+  left: 15px;
+}
+#project3 .star-gt > img {
+  left: 565px;
+  bottom: 30px;
+}
+#startingPrice,
+#planePrice,
+#margin,
+#dealPrice,
+#premiumRate,
+#markUp {
+  width: 402px;
+  margin-right: 5px;
+}
+#deal-gt .star-gt,
+#project3 .star-gt {
+  margin-bottom: 0;
+}
+#deal-gt .star-gt label,
+#project3 .star-gt label {
+  position: relative;
+  top: -10px;
+}
+#deal-gt .input-daterange,
+#project3 .input-daterange {
+  width: 350px;
+}
+#deal-gt {
+  position: relative;
+  left: 9px;
+}
+#deal-gt .dropdown-inner {
+  width: 350px;
+}
+#deal-gt > form > div:nth-child(2) {
+  position: relative;
+  top: 9px;
+}

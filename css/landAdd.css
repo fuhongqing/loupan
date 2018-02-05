@@ -1,0 +1,468 @@
+body {
+  background: #F8F8F8;
+  font: 14px PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+  overflow: auto;
+}
+a {
+  color: #616161;
+  text-decoration: none;
+}
+a:hover {
+  color: #DB7B0D;
+  text-decoration: none;
+}
+ul,
+ol,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gt {
+  float: right;
+}
+.lf {
+  float: left;
+}
+.content {
+  margin: 0 auto;
+  width: 1200px;
+  min-height: 600px;
+  padding: 0 20px;
+  background: #fff;
+}
+input:focus {
+  outline: none;
+}
+form.sui-form input[type="text"] {
+  font-size: 14px;
+}
+input::-webkit-input-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input:-moz-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input::-moz-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input:-ms-input-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+.sui-form input[type="text"] {
+  box-shadow: none;
+  color: #333333;
+  font-family: 14px PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+}
+.datepicker {
+  cursor: pointer;
+  position: absolute;
+  width: 258px;
+  height: 258px;
+  background: #fff;
+  border: 1px solid #DDDDDD;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
+  border-radius: 2px;
+}
+.datepicker .table-condensed {
+  width: 258px;
+  height: 258px;
+  padding: 15px;
+}
+.datepicker .datepicker-switch {
+  color: #475669;
+}
+.datepicker .dow {
+  color: #8492A6;
+}
+.datepicker .day {
+  text-align: center;
+}
+.datepicker .today {
+  color: #fff;
+  background: #ED9127;
+  width: 32px;
+  height: 32px;
+}
+.datepicker .today:hover {
+  background: #DB7B0D;
+}
+.datepicker .prev,
+.datepicker .next {
+  display: block;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  position: relative;
+}
+.datepicker .prev {
+  border-right: 8px solid #bcbcbc;
+  left: 8px;
+}
+.datepicker .next {
+  border-left: 8px solid #bcbcbc;
+  right: -12px;
+}
+.datepicker .datepicker-months span,
+.datepicker .datepicker-years span {
+  display: inline-block;
+  width: 55px;
+  line-height: 5;
+}
+.datepicker .datepicker-months .table-condensed td,
+.datepicker .datepicker-years .table-condensed td {
+  position: relative;
+  left: 12px;
+}
+.input-daterange img {
+  position: relative;
+  right: 30px;
+}
+.input-daterange .agentBegin {
+  right: 90px;
+}
+.dropdown-inner span {
+  color: #333333;
+  font-size: 14px;
+}
+h1 {
+  font-size: 20px;
+  padding: 15px 0 8px 0;
+  margin-top: 50px;
+  text-align: left;
+  border-bottom: 1px solid #DDDDDD;
+}
+.content {
+  top: -20px;
+}
+.content {
+  min-height: 245px;
+}
+header p {
+  height: 36px;
+  line-height: 36px;
+}
+header p a {
+  font-size: 12px;
+  color: #333333;
+}
+.dropdown-inner {
+  width: 446px;
+  height: 36px;
+  line-height: 34px;
+  background: #fff;
+  position: relative;
+  left: -18px;
+}
+.dropdown-inner .dropdown-toggle {
+  left: 0;
+  color: #BEBEBE;
+}
+.dropdown-inner .dropdown-toggle .caret {
+  color: #BEBEBE;
+  top: 8px;
+  position: relative;
+}
+.dropdown-inner .dropdown-toggle span {
+  color: #BEBEBE;
+}
+.dropdown-inner .dropdown-toggle li.active > a {
+  background-color: #ED9127;
+}
+.dropdown-inner .dropdown-toggle .sui-dropdown-menu > li > a:hover {
+  color: #fff !important;
+  background: #ED9127 !important;
+}
+footer {
+  border-top: 1px solid transparent;
+}
+footer a {
+  border: 1px solid #ED9127;
+  color: #ED9127;
+  font-size: 14px;
+  border-radius: 4px;
+  display: inline-block;
+  width: 70px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+}
+footer a:hover {
+  color: #fff;
+  background: #ED9127;
+}
+#select section div.gt {
+  height: 144px;
+}
+#select section .sui-form .control-group {
+  width: 557px;
+  height: 36px;
+}
+#select section .sui-form .control-group .control-label {
+  text-align: left;
+  font-size: 14px;
+}
+#select section .star > img {
+  position: relative;
+  left: -13px;
+  top: 5px;
+}
+#select section .star-gt > img {
+  position: relative;
+  left: -13px;
+}
+#select section input {
+  width: 446px;
+  height: 36px !important;
+  margin-left: -18px !important;
+  padding: 10px!important;
+}
+#select section div.gt {
+  width: 554px;
+}
+#select section #project1 {
+  width: 554px;
+}
+#select section #project1 #area1 {
+  margin-right: 20px;
+  display: none;
+  position: relative;
+}
+#select section #project1 .sui-form .areas > img {
+  position: relative;
+  left: -107px;
+  top: 5px;
+}
+#select section #project1 .sui-form .areas a {
+  right: 35px;
+}
+#select section #project1 .sui-form .areas .dropdown-inner,
+#select section #project1 .sui-form .areas #cityName {
+  width: 108px;
+  height: 36px;
+  margin-right: 10px;
+}
+#select section #project1 .sui-form .control-group {
+  height: 36px;
+}
+#select section #CityID0 {
+  display: none;
+  border-radius: 0 0 2px 2px;
+  position: absolute;
+  background-color: #fff;
+  z-index: 9;
+  max-height: 300px;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  left: -18px;
+  top: 40px;
+  padding: 5px 0;
+  width: 108px;
+}
+#select section #CityID0 li {
+  height: 22px;
+}
+#select section #CityID0 li a {
+  display: block;
+  width: 100%;
+  height: 22px;
+  line-height: 22px;
+  padding-left: 8px;
+}
+#select section #CityID0 li img {
+  display: none;
+  top: 4px;
+}
+#select section #CityID0 a:hover {
+  background: #ED9127;
+  color: #fff;
+}
+#select section #CityID0 li.active a {
+  color: #ED9127;
+}
+#select section #CityID0 li.active img {
+  display: inline-block;
+}
+#select section > div.gt form {
+  position: relative;
+  left: 14px;
+}
+#select footer {
+  margin-top: 20px;
+}
+#select footer a {
+  margin-right: 13px;
+}
+#basic {
+  margin-top: -18px;
+}
+#basic section input {
+  position: relative;
+  left: 5px;
+}
+#basic section h1 {
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+#basic section .sui-form .control-group .control-label {
+  text-align: left;
+  font-size: 14px;
+}
+#basic section input {
+  width: 402px;
+  height: 36px !important;
+  margin-left: -18px !important;
+  margin-right: 10px;
+  padding: 10px!important;
+}
+#basic section div.gt {
+  width: 554px;
+  height: 225px;
+}
+#basic section #permit label {
+  font-size: 12px;
+  position: relative;
+  bottom: 9px;
+}
+#basic section #permit input {
+  position: relative;
+  right: -100px;
+  bottom: 36px;
+  left: 103px;
+}
+#basic section #project2 {
+  width: 554px;
+}
+#basic section #project2 .sui-form .areas input {
+  width: 176px;
+  height: 36px;
+  margin-right: -3px;
+}
+#basic section #project2 .sui-form .areas input:first-child {
+  margin-right: 46px;
+}
+#basic section #project2 .sui-form .areas span {
+  position: relative;
+  right: 190px;
+}
+#basic section #project2 .sui-form .control-group {
+  height: 36px;
+}
+#basic section #project2 #plotRatio1,
+#basic section #project2 #plotRatio2,
+#basic section #project2 #buildingDensity1,
+#basic section #project2 #buildingDensity2 {
+  width: 102px;
+}
+#basic section #project2 span {
+  margin-right: 15px;
+}
+#basic section #project2 input {
+  width: 388px;
+}
+#basic #basic-gt .controls {
+  position: relative;
+  left: 9px;
+}
+#basic #basic-gt img {
+  margin-left: 10px;
+}
+#deal {
+  margin-top: -18px;
+  min-height: 500px;
+}
+#deal section .input-daterange img {
+  top: 26px;
+}
+#deal section h1 {
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+#deal section .control-group > img {
+  margin-left: 2px;
+}
+#deal section .sui-form .control-group {
+  width: 554px;
+  height: 36px;
+}
+#deal section .sui-form .control-group .control-label {
+  text-align: left;
+  width: 100px;
+  font-size: 14px;
+}
+#deal section .star-gt > img {
+  position: relative;
+  left: -13px;
+}
+#deal section input {
+  width: 446px;
+  height: 36px !important;
+  margin-left: -18px !important;
+  padding: 10px!important;
+}
+#deal section div.gt {
+  min-height: 200px;
+}
+#deal section #project3 {
+  width: 554px;
+}
+#deal section #project3 .sui-form .dropdown-inner {
+  left: 15px;
+}
+#deal section #project3 .star-gt > img {
+  left: 565px;
+  bottom: 30px;
+}
+#deal #startingPrice,
+#deal #planePrice,
+#deal #margin,
+#deal #dealPrice,
+#deal #premiumRate,
+#deal #markUp {
+  width: 402px;
+  margin-right: 5px;
+}
+#deal #deal-gt .star-gt,
+#deal #project3 .star-gt {
+  margin-bottom: 0;
+  position: relative;
+  bottom: 10px;
+}
+#deal #deal-gt .input-daterange,
+#deal #project3 .input-daterange {
+  width: 446px;
+}
+#deal #deal-gt {
+  position: relative;
+  left: 9px;
+  bottom: 15px;
+  height: 280px;
+}
+#deal #deal-gt .start {
+  margin-bottom: 0;
+}

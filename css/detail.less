@@ -1,0 +1,884 @@
+//引入初始文件
+@import "init";
+//标题
+h2{
+  font-size: 20px;
+  padding:15px 0 8px 0;
+  margin-top: 50px;
+  text-align: left;
+  border-bottom: 1px solid @border-color;
+}
+h1{
+  font-size: 20px;
+}
+h3{
+  font-size: 16px;
+  color: #B2B2B2;
+  padding: 8px 0;
+}
+h4{
+  font-size: 14px;
+}
+.content{
+  min-height: 170px;
+}
+.content:first-child{
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+//按钮统一样式
+.btn{
+  a{
+    position: relative;
+  }
+}
+.btn>a,.btn-update>a{
+  color: @content-bg;
+  background: @a-color;
+  border-radius: 4px;
+  display: inline-block;
+  width: 70px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+}
+.btn>a:hover{
+  background: @a-hover;
+}
+div.btn-update>a{
+  line-height: 26px;
+  border: none;
+}
+div.btn-update>a:hover{
+  color: @content-bg;
+  background: @a-hover;
+}
+//联系人查看链接点击显示电话
+#contacts>div.person .show{
+  display: none;
+}
+//模态框
+#myModal,#myModal1,#myModal2,#myModal3,#myModal4,#myModal5,#myModal6,#myModal7{
+  width: 846px;
+  height: 346px;
+  left: 35%;
+  overflow: auto;
+  .bar{
+    height: 4px;
+    background: @a-color;
+  }
+  .modal-header{
+    margin: 0;
+    padding:10px 10px 8px 10px
+  }
+  .modal-body{
+    .dropdown-inner{
+      .caret{
+        color: #BEBEBE;
+      }
+    }
+    //.areas类统一样式，分段表单
+    .sui-form{
+      .areas{
+        input{
+          width: 80px;
+          height: 36px;
+          margin-right: -3px;
+        }
+        input:first-child{
+          margin-right: 46px;
+        }
+        span{
+          position: relative;
+          right: 107px;
+        }
+      }
+      .control-group{
+        height: 36px;
+      }
+      #valid-time,#open-time{
+        .control-label{
+          vertical-align: baseline;
+        }
+      }
+      #open-time{
+        .control-group{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  h4{
+    font-size: 20px;
+  }
+  input{
+    width: 256px;
+    height: 36px;
+    margin-right: 5px;
+  }
+  .control-label{
+    text-align: left;
+    font-size: 14px;
+  }
+  .modal-footer{
+    text-align: center;
+    background: #fff;
+    margin-top: -17px;
+    position: relative;
+  }
+  .modal-footer>button{
+    display: inline-block;
+    width: 70px;
+    height: 26px;
+    line-height: 13px;
+    text-align: center;
+    background: @a-color;
+    border-radius: 4px;
+    .a-btn(@a-color,@content-bg,14px);
+  }
+  .modify:hover{
+    background: @a-hover;
+  }
+  .modal-footer>button:last-child{
+    .a-btn(@border-color, #BABABA,14px);
+    background: @body-bg;
+    margin-left: 43px;
+  }
+}
+//新增项目联系人
+#myModal6,#myModal7{
+  width: 400px;
+  height: 320px;
+  margin-top: -130px;
+  left: 54%;
+  .dropdown-inner{
+    width: 256px;
+    top: 0;
+    right: 0;
+    img{
+      top: 10px;
+      position: relative;
+      left: 25px;
+    }
+  }
+  .modal-body{
+    height: 210px;
+    margin-top: 20px;
+    .control-label{
+      width: 65px;
+    }
+    .controls{
+      width: 256px;
+    }
+  }
+  .modal-footer{
+    margin-top: -30px;
+    position: relative;
+  }
+}
+#posit>a>span{
+  color:#BEBEBE;
+}
+//当前维护人
+#myModal7{
+  height: 225px;
+  .modal-body{
+    height: 150px;
+    #weihuMenu{
+      max-height: 100px;
+    }
+  }
+  .modal-footer{
+    margin-top: -75px;
+  }
+}
+//基本信息
+#myModal5{
+  height: 445px;
+  .modal-body{
+    height: 365px;
+  }
+  .modal-footer{
+    margin-top: -35px;
+  }
+  .control-group{
+    height: 36px;
+  }
+  .dropdown-inner{
+    width: 256px;
+    top: 0;
+  }
+  #count-gt1{
+    height: 150px;
+  }
+}
+//建筑类型多选
+.type{
+  position: relative;
+  label{
+    display: inline-block;
+  }
+  img{
+    position: relative;
+    top: 18px;
+    right: 15px;
+  }
+  .caret{
+    right: 19px;
+    z-index: 5;
+    top: 15px;
+  }
+  #buildingVal,#supportVal{
+    border: 1px solid #cccccc;
+    display: inline-block;
+    border-radius: 2px;
+    padding-left: 8px;
+    width: 256px;
+    height: 36px;
+    line-height: 34px;
+    background: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    span{
+      color:@text-color;
+      font-size: 14px;
+    }
+  }
+  #BuildingType,#supportType{
+    display: none;
+    border-radius: 0 0 2px 2px;
+    position: absolute;
+    background-color: @content-bg;
+    z-index: 9;
+    max-height: 300px;
+    box-shadow: 2px 2px 0 0 rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+    left: 100px;
+    top: 40px;
+    padding: 5px 0;
+    width: 255px;
+    li{
+      height: 22px;
+      a{
+        display: block;
+        width: 100%;
+        height: 22px;
+        line-height: 22px;
+        padding-left: 8px;
+        color:@text-color;
+      }
+      img{
+        display: none;
+        top: 4px;
+      }
+    }
+    a:hover{
+      background: @a-color;
+      color:@content-bg;
+    }
+    li.active{
+      a{
+        color: @a-color;
+      }
+      img{
+        display: inline-block;
+      }
+    }
+  }
+}
+//体量
+#myModal{
+  height: 355px;
+  .modal-footer{
+    margin-top: -5px;
+  }
+}
+//销售信息
+#myModal1 {
+  height: 380px;
+  .control-group{
+    height: 36px;
+  }
+  .modal-body {
+    height: 280px;
+  }
+  .modal-footer{
+    margin-top: -30px;
+  }
+  .dropdown-inner {
+    width: 256px;
+    top: 0;
+  }
+  .controls {
+    input {
+      padding-left: 5px;
+    }
+  }
+}
+  //合作情况
+#myModal2 {
+    height: 485px;
+    .control-group{
+      height: 36px;
+    }
+    .dropdown-inner {
+      width: 256px;
+    }
+    .modal-body {
+      #timeM{
+        display: none;
+      }
+      height: 382px;
+      label {
+        padding: 10px 0;
+        display: inline-block;
+      }
+      #project-m3 {
+        #companyM{
+          display: none;
+        }
+        .control-group {
+          display: inline-block;
+        }
+      }
+      #project-m3>form>div:nth-child(2)>.controls{
+        position: relative;
+        top: 8px;
+      }
+      #count-gt3{
+        margin-top: 60px;
+        #AgentTimeEnd{
+          position: relative;
+          right: 25px;
+        }
+        .input-daterange{
+          img.agentEnd{
+            right: 52px;
+          }
+        }
+        //保证金表单框位置微调
+        .star{
+          .dropdown-inner{
+            top:0;
+          }
+        }
+        //右侧除第一行调整行间距
+        .control-group:not(.areas){
+          position: relative;
+          bottom: 10px;
+        }
+        //时间段
+        .areas{
+          margin-bottom: 15px;
+          input{
+            width: 100px;
+          }
+          span{
+            right: 22px;
+          }
+        }
+      }
+      //紧急程度整行微调
+      #count-gt3>.sui-form>.control-group:last-child{
+        bottom: 20px;
+      }
+      #count-gt3>form>div:nth-child(3)>.controls{
+        position: relative;
+        top: 5px;
+      }
+    }
+    .modal-footer{
+      margin-top: -30px;
+    }
+  }
+//土地情况
+#myModal3{
+  height: 385px;
+  .modal-body{
+    height: 315px;
+  }
+  .modal-footer{
+    margin-top: -75px;
+  }
+  //土地情况，竞得日期
+  #project-m4>form>div:first-child{
+    margin-bottom: 0;
+    label{
+      position: relative;
+      bottom: 10px;
+    }
+  }
+  //下拉框
+  #project-m4{
+    .dropdown-inner{
+      width: 256px;
+      top: 0;
+      position: relative;
+    }
+  }
+}
+//楼盘详情
+#myModal4{
+  margin-top: -280px;
+  height: 565px;
+  .dropdown-inner{
+    width: 256px;
+    position: relative;
+    top: 0;
+  }
+  //日历整行的调整
+  #count-gt5{
+    .star-gt{
+      margin-bottom: 0;
+    }
+    .date{
+      position: relative;
+      bottom: 8px;
+    }
+  }
+}
+  //头部楼盘简介
+  header {
+    min-height: 210px;
+    a {
+      color: @a-color;
+    }
+    //项目联系人
+    #contacts {
+      width: 286px;
+      height: 198px;
+      border: 1px solid @border-color;
+      margin-top: 10px;
+      //查看链接
+      .look {
+        text-align: center;
+      }
+      .look1{
+        text-align: left;
+        padding-left: 29px;
+      }
+      .look a {
+        position: relative;
+        right: 5px;
+      }
+    }
+    #contacts > div.person {
+      height: 124px;
+      overflow: auto;
+    }
+    #contacts > div:not(:last-child) {
+      padding: 5px 10px 0 10px;
+      margin-bottom: 5px;
+    }
+    #contacts > div:first-child {
+      .btn {
+        text-align: right;
+        a {
+          bottom: -5px;
+        }
+      }
+    }
+    #contacts > div:last-child {
+      border-top: 1px solid @border-color;
+      height: 33px;
+      line-height: 33px;
+      position: relative;
+      bottom: 5px;
+      padding-left: 10px;
+      .look a {
+        bottom: 4px;
+        right: 0;
+      }
+    }
+    //项目简介
+    #project {
+      //h3
+      h3{
+        line-height: 1;
+        font-weight: normal;
+      }
+      //导航条
+      p {
+        height: 36px;
+        line-height: 36px;
+        margin-bottom: 10px;
+        a {
+          font-size: 12px;
+          color: @text-color;
+        }
+      }
+      //描边按钮
+      .btn > a {
+        width: 55px;
+        height: 16px;
+        line-height: 13px;
+        background: @content-bg;
+        .a-btn(#F25466, #F25466, 12px);
+      }
+      #project-detail>div.project>div:nth-child(3){
+        margin-right: 30px;
+      }
+      //.zz
+      .zz{
+        width: 60px;
+      }
+      .zz > a {
+        .a-btn(#02BF85, #02BF85, 12px);
+      }
+      //扫盘中按钮定位
+      .sui-row-fluid:first-child > .btn a {
+        top: -4px;
+        right: 25px;
+      }
+      //住宅按钮定位
+      .sui-row-fluid:first-child > .zz > a {
+        top: -4px;
+        right: 65px;
+      }
+      .sui-row-fluid:nth-child(2) > div:last-child {
+        float: right;
+        position: relative;
+        bottom: 6px;
+        right: 65px;
+      }
+      .sui-row-fluid:last-child > div.btn-update {
+        float: left;
+        bottom: 43px;
+        position: relative;
+        right: 57px;
+      }
+      .btn-update {
+        position: relative;
+        left: 0;
+        bottom: 40px;
+      }
+      .lists > div:nth-child(2n) {
+        position: relative;
+        left: -20px;
+        bottom: 7px;
+      }
+      .lists > div:last-child {
+        left: -82px;
+      }
+      .lists > div.no {
+        bottom: 6px;
+        left: -70px;
+      }
+    }
+    //每行的高度
+    #project > div > div {
+      height: 45px;
+      line-height: 45px;
+    }
+  }
+  //内容部分
+  section {
+    .grid-demo {
+      margin: 10px 0;
+      .sui-row {
+        height: 34px;
+        line-height: 34px;
+        .move {
+          position: relative;
+          left: 190px;
+        }
+      }
+      .sui-row > div:last-child:not(.two) {
+        left: 160px;
+      }
+      .sui-row > div:nth-child(2n-1) {
+        color: #B2B2B2;
+      }
+      .sui-row > div:nth-child(2n) {
+        position: relative;
+        right: 63px;
+      }
+    }
+  }
+  section > h2:not(:first-child) {
+    margin-top: -20px;
+  }
+  //下拉框
+  .dropdown-inner {
+    width: 234px;
+    height: 36px;
+    line-height: 30px;
+    position: relative;
+    top: 8px;
+    .caret {
+      position: relative;
+      top: 6px;
+    }
+    li.active>a{
+      background-color: @a-color;
+    }
+    .sui-dropdown-menu>li>a:hover{
+      color: @content-bg!important;
+      background: @a-color!important;
+    }
+  }
+  //跟进记录
+  #records {
+    height: 275px;
+    #follow {
+      height: 50px;
+      line-height: 50px;
+      padding: 0 10px;
+      border: 1px solid @border-color;
+      border-top: none;
+      border-bottom: none;
+    }
+    #follow > div > div:nth-child(2) .dropdown-inner {
+      right: 90px;
+    }
+    #follow > div > div:nth-child(4) .dropdown-inner {
+      left: -75px;
+    }
+    #follow > div > div:nth-child(6) .dropdown-inner {
+      left: -60px;
+    }
+    #follow > div > div:nth-child(3) {
+      position: relative;
+      left: 45px;
+    }
+    #follow > div > div:nth-child(5) {
+      position: relative;
+      left: 60px;
+    }
+    div.span8 {
+      width: 100%;
+      textarea {
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid #DDDDDD;
+      }
+      textarea:focus{
+        outline: none;
+        border-color: @a-color;
+      }
+    }
+    p.btn {
+      margin: 20px 0;
+      a.load {
+        margin-right: 10px;
+        background: @content-bg;
+        .a-btn(@a-color, @a-color, 14px);
+        display: none;
+      }
+    }
+    //文件选择，上传附件
+    #btn-file{
+      display:none;
+    }
+  }
+  //#types
+  #types {
+    height: 46px;
+    line-height: 46px;
+    padding: 0 110px;
+    .dropdown-inner {
+      width: 185px;
+      background: @content-bg;
+    }
+  }
+  #types > div > div:nth-child(2) .dropdown-inner {
+    right: 130px;
+    top: 5px;
+  }
+  #types > div > div:nth-child(4) .dropdown-inner {
+    left: -150px;
+    top: 5px;
+  }
+  #types > div > div:nth-child(3) {
+    position: relative;
+    left: -20px;
+  }
+  //#show
+  #show {
+    min-height: 135px;
+  }
+  #show > div {
+    .down-load {
+      width: 295px;
+      height: 24px;
+      line-height: 24px;
+      img {
+        margin: 0 5px;
+      }
+      a.gt {
+        color: @a-color;
+      }
+      //文件以及链接
+      p.file{
+        width: 300px;
+      }
+    }
+    .picture {
+      width: 230px;
+      position: relative;
+      right: 63px;
+      img {
+        margin: 0 5px;
+      }
+    }
+    padding-top: 15px;
+    .grid-demo {
+      border-bottom: 1px dashed @border-color;
+      padding-bottom: 10px;
+      .tips {
+        color: #BABABA;
+      }
+      .time {
+        height: 36px;
+        line-height: 36px;
+        img {
+          position: relative;
+          right: 5px;
+          bottom: 2px;
+        }
+      }
+    }
+    .btn > a {
+      height: 20px;
+      width: 62px;
+      line-height: 20px;
+      .a-btn(#C2C2C2, #C2C2C2, 14px);
+      background: @content-bg;
+    }
+    .span2 > a {
+      width: 91px;
+    }
+    .sui-row {
+      line-height: 36px;
+      .btn {
+        position: relative;
+        left: -23px;
+      }
+      .basic {
+        left: -50px;
+      }
+    }
+    .sui-row > div.btn:last-child {
+      left: -148px;
+    }
+  }
+//分页器
+#pages {
+  min-height: 92px;
+  padding-top: 20px;
+  li{
+    float:left;
+    height: 28px;
+    line-height: 26px;
+    text-align: center;
+    a {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      font-size: 13px;
+      text-align: center;
+      vertical-align: middle;
+      border:1px solid @border-color;
+      border-left: none;
+      color: @text-color;
+      border-color: @border-color;
+    }
+    #pageNum>li>a:hover {
+      color: @content-bg;
+      background: @a-color;
+      border-color: @a-color;
+    }
+    #pageNum>li.active>a:hover{
+      background: @a-hover;
+    }
+  }
+  li.prev>a{
+    border-left:1px solid @border-color ;
+  }
+  li.active {
+    a {
+      color: @content-bg;
+      background: @a-color;
+      border-color: @a-color;
+    }
+  }
+  li.disabled {
+    a{
+      background: #EEEEEE;
+      color:@border-color;
+    }
+  }
+}
+  /*媒体查询*/
+  @media screen and (max-width: 1265px) {
+    section {
+      .grid-demo {
+        .sui-row > div:nth-child(2n) {
+          position: relative;
+          right: 93px;
+        }
+        .sui-row > div:last-child:not(.two) {
+          left: 120px;
+        }
+      }
+    }
+
+    //#types
+    #types > div > div:nth-child(2) .dropdown-inner {
+      right: 130px;
+      top: 5px;
+    }
+
+    #types > div > div:nth-child(4) .dropdown-inner {
+      left: -220px;
+      top: 5px;
+    }
+
+    #types > div > div:nth-child(3) {
+      position: relative;
+      left: -90px;
+    }
+
+    //跟进记录
+    #records {
+      #follow > div > div:nth-child(2) .dropdown-inner {
+        right: 90px;
+      }
+      #follow > div > div:nth-child(4) .dropdown-inner {
+        left: -90px;
+      }
+      #follow > div > div:nth-child(6) .dropdown-inner {
+        left: -60px;
+      }
+      #follow > div > div:nth-child(3) {
+        position: relative;
+        left: 30px;
+      }
+      #follow > div > div:nth-child(5) {
+        position: relative;
+        left: 60px;
+      }
+    }
+
+    //#show
+    #show, #show1, #show2 {
+      .sui-row {
+        line-height: 36px;
+        .btn {
+          position: relative;
+          left: -40px;
+        }
+        .basic {
+          left: -65px;
+        }
+      }
+      .sui-row > div.btn:last-child {
+        left: -160px;
+      }
+    }
+  }

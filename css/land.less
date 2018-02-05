@@ -1,0 +1,328 @@
+//引入初始文件
+@import "init";
+//header部分样式
+header{
+  margin-top: 50px;
+  height:58px;
+  border-bottom: 1px solid @border-color;
+  border-top: 1px solid transparent;//解决外边距溢出问题
+  h1{
+    font-size:20px;
+    margin:30px 0 8px 0;
+    line-height: 1;
+  }
+  div{
+    a{
+      display: inline-block;
+      border-radius: 4px;
+      width:90px;
+      height:32px;
+      padding:6px 15px;
+      margin:18px 0 8px 0;
+      background: @body-bg;
+      .a-btn(@border-color,@text-color,14px)
+    }
+    a:first-child{
+      margin-right: 20px;
+    }
+    a.active{
+      .a-btn(@a-color,@a-color,14px);
+      background:@content-bg;
+    }
+  }
+}
+//类型选项列表
+//section类型列表部分样式
+section{
+  p{
+    height:36px;
+    line-height: 36px;
+    a{
+      font-size: 12px;
+    }
+  }
+  //筛选条件
+  li.title{
+    font-weight: bold;
+  }
+  div{
+    background: @body-bg;
+    ul{
+      li{
+        float:left;
+        margin:10px 25px 0 0;
+        a{
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+      li:first-child{
+        margin-left: 10px;
+      }
+      li.active{
+        a{
+          color:@a-color;
+        }
+      }
+    }
+    p{
+      text-align: center;
+      a{
+        font-size: 12px;
+        cursor: pointer;
+        color: #BABABA;
+      }
+    }
+  }
+  //展开更多
+  #more{
+    padding-bottom: 10px;
+    .total{
+      margin-left: 68px;
+      margin-top: 16px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      min-height:40px;
+      background: @content-bg;
+      border: 1px solid @border-color;
+      border-radius: 4px;
+      display: none;
+      #borough{
+        margin-top: -10px;
+        width: 960px;
+      }
+    }
+    #limit{
+      margin-top: -10px;
+      margin-left: 5px;
+      li.all{
+        margin-left: -5px;
+      }
+    }
+  }
+  //板块
+  #plate{
+    display: none;
+    width: 590px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    min-height: 40px;
+    background: @content-bg;
+    position: absolute;
+    left: 235px;
+    top: 177px;
+    border: 1px solid @border-color;
+    border-radius: 4px;
+    z-index: 5;
+    #plateTotal{
+      margin-top: -10px;
+      width: 580px;
+    }
+  }
+  #plate>ul>li{
+    float: left;
+    margin-right: 15px;
+    //字母颜色
+    span{
+      color:@a-color;
+      margin-right: 5px;
+    }
+  }
+  //子区域
+  #plate>ul>li>a:last-child{
+    margin-left: 15px;
+  }
+  #plate>ul>li:first-child{
+    margin-left: 0;
+  }
+  //三角形
+  #plate>img{
+    position: absolute;
+    top: 12px;
+    left: -12px;
+  }
+  #plate>img.caret-right{
+    display: none;
+    left: 584px;
+  }
+}
+//#search搜索框与按钮
+#search{
+  height:56px;
+  background: @content-bg;
+  .btns{
+    a{
+      display: inline-block;
+      width:90px;
+      height:32px;
+      font-size: 14px;
+      padding:6px 3px;
+      color:@content-bg;
+      background: @a-color;
+      margin: 12px 0;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+    a:hover{
+      background:@a-hover;
+    }
+  }
+  .input-append{
+    margin:10px 0;
+    width:300px;
+    border-radius: 4px;
+    input{
+      width: 264px;
+      height:36px;
+      line-height: 36px;
+      vertical-align: middle;
+      border-radius: 4px 0 0 4px;
+    }
+    span{
+      display: inline-block;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      line-height: 25px;
+      background: #FCFBF9;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
+//#items项目列表
+#items{
+  position: relative;
+  top: -18px;
+  margin:0 auto;
+  padding:0 15px;
+  background: @content-bg;
+  border: 1px solid @border-color;
+  tr{
+    height:50px;
+    border-bottom: 1px solid @border-color;
+  }
+  tr:last-child{
+    border-bottom:none;
+  }
+  thead {
+    tr {
+      height: 51px;
+    }
+    th {
+      line-height: 2.1;
+      font-size: 16px;
+      border-right: 1px solid @border-color;
+      vertical-align: middle;
+      .up-img {
+        position: relative;
+        bottom: 5px;
+        left: 22px;
+      }
+      .down-img {
+        position: relative;
+        top: 5px;
+      }
+    }
+    th:first-child {
+      width: 245px;
+      span {
+        color: @a-color;
+      }
+    }
+    th:last-child {
+      border-right: none;
+    }
+  }
+  tbody{
+    td{
+      font-size: 14px;
+      border-right: 1px solid @border-color;
+      padding: 5px 8px;
+      cursor: pointer;
+      p{
+        color:#BABABA;
+        font-size: 12px;
+      }
+      //交易状态，类型，拍卖
+      .states>a.landState{
+        display: inline-block;
+        width: 46px;
+        text-align: center;
+        height: 20px;
+        line-height: 15px;
+      }
+    }
+    td:first-child{
+      width: 305px;
+      cursor: auto;
+      div.states{
+        a{
+          margin-left: 10px;
+          padding:1px 2px;
+          border-radius: 2px;
+          .a-btn(#CB4958,#CB4958,10px)
+        }
+        a.planningPurposes{
+          .a-btn(@a-color,@a-color,10px)
+        }
+        a:last-child{
+          .a-btn( #7EE6CF, #7EE6CF,10px)
+        }
+      }
+    }
+    td:last-child{
+      border-right: none;
+    }
+    tr:nth-child(2n-1){
+      background: @body-bg;
+    }
+  }
+}
+//分页器
+#pages {
+  min-height: 92px;
+  li {
+    float: left;
+    height: 28px;
+    line-height: 26px;
+    text-align: center;
+    a {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      font-size: 13px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid @border-color;
+      border-left: none;
+      color: @text-color;
+      border-color: @border-color;
+    }
+    #pageNum>li>a:hover {
+      color: @content-bg;
+      background: @a-color;
+      border-color: @a-color;
+    }
+    #pageNum>li.active>a:hover{
+      background: @a-hover;
+    }
+  }
+  li.prev > a {
+    border-left: 1px solid @border-color;
+  }
+  li.active {
+    a {
+      color: @content-bg;
+      background: @a-color;
+      border-color: @a-color;
+    }
+  }
+  li.disabled {
+    a{
+      background: #EEEEEE;
+      color:@border-color;
+    }
+  }
+ }

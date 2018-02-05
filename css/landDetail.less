@@ -1,0 +1,353 @@
+//引入初始文件
+@import "init";
+.content{
+  min-height: 800px;
+}
+//日期
+.input-daterange img {
+  top: 25px;
+  right: 10px;
+}
+//标题
+h2{
+  font-size: 20px;
+  padding:15px 0 8px 0;
+  margin-top: 50px;
+  text-align: left;
+  border-bottom: 1px solid @border-color;
+  span{
+    font-weight: normal;
+  }
+}
+h3{
+  font-size: 18px;
+}
+h4{
+  font-size: 14px;
+}
+//下拉菜单
+.dropdown-inner {
+  width: 256px;
+  height: 36px;
+  line-height: 32px;
+  .caret {
+    position: relative;
+    top: 6px;
+  }
+  li.active>a{
+    background-color: @a-color;
+  }
+  .sui-dropdown-menu>li>a:hover{
+    color: @content-bg!important;
+    background: @a-color!important;
+  }
+}
+//导航条
+header>p{
+  margin: 10px 0;
+}
+//地区标号
+header>div{
+  width: 350px;
+  h4{
+    line-height: 70px;
+    height: 56px;
+    font-weight: normal;
+  }
+}
+//地块的成交状态
+header>h2>span{
+  color:@a-color;
+}
+//表格
+#basic,#deal{
+  position: relative;
+  background: @content-bg;
+  border: 1px solid @border-color;
+  tr{
+    height:50px;
+    border-bottom: 1px solid @border-color;
+  }
+  tr:last-child{
+    border-bottom:none;
+  }
+  thead {
+    //编辑按钮
+    a.sui-btn{
+      font-size: 14px;
+      color: @content-bg;
+      background: @a-color;
+      border-radius: 4px;
+      display: inline-block;
+      width: 70px;
+      height: 26px;
+      text-align: center;
+      line-height: 21px;
+      border: none;
+    }
+    tr {
+      height: 51px;
+    }
+    th {
+      line-height: 2.1;
+      font-size: 16px;
+      border-right: 1px solid @border-color;
+      vertical-align: middle;
+      .up-img {
+        position: relative;
+        bottom: 5px;
+        left: 22px;
+      }
+      .down-img {
+        position: relative;
+        top: 5px;
+      }
+    }
+    th:first-child {
+      width: 245px;
+      span {
+        color: @a-color;
+      }
+    }
+    th:last-child {
+      border-right: none;
+    }
+  }
+  thead>tr>th>a:hover{
+    background: @a-hover;
+  }
+  tbody{
+    //表格主体中对应值
+    span{
+      width: 255px;
+      text-align: left;
+      height: 18px;
+      line-height: 21px;
+    }
+    td{
+      font-size: 14px;
+      border-right: 1px solid @border-color;
+      padding: 5px 8px;
+      p{
+        color:#BABABA;
+        font-size: 12px;
+      }
+    }
+    td:first-child{
+      width: 245px;
+      div.gt{
+        a{
+          margin-left: 10px;
+          padding:1px 2px;
+          .a-btn(#CB4958,#CB4958,10px)
+        }
+        a:nth-child(2){
+          .a-btn(@a-color,@a-color,10px)
+        }
+        a:last-child{
+          .a-btn( #7EE6CF, #7EE6CF,10px)
+        }
+      }
+    }
+    td:last-child{
+      border-right: none;
+    }
+    tr:nth-child(2n-1){
+      background: @body-bg;
+    }
+    //表格内键颜色设置
+    h4{
+      color: #B2B2B2;
+    }
+  }
+  //表格主体每格宽度固定
+  tbody>tr>td{
+    width: 33.3%;
+  }
+}
+//模态框
+#myModal,#myModal1{
+  width: 1050px;
+  height: 475px;
+  left: 27%;
+  overflow: auto;
+  .bar{
+    height: 4px;
+    background: @a-color;
+  }
+  .modal-header{
+    margin-top: 20px;
+  }
+  .modal-body{
+    .dropdown-inner{
+      .caret{
+        color: #BEBEBE;
+      }
+      span{
+        color: @text-color;
+        font-weight: normal;
+      }
+    }
+  }
+  h4{
+    font-size: 20px;
+  }
+  input{
+    width: 256px;
+    height: 36px;
+    margin-right: 5px;
+  }
+  .control-label{
+    text-align: left;
+    font-size: 14px;
+  }
+  .modal-footer{
+    text-align: center;
+    background: #fff;
+    margin-top: -17px;
+    position: relative;
+  }
+  .modal-footer>button{
+    display: inline-block;
+    width: 70px;
+    height: 26px;
+    line-height: 13px;
+    text-align: center;
+    background: @a-color;
+    border-radius: 4px;
+    .a-btn(@a-color,@content-bg,14px);
+  }
+  .modify:hover{
+    background: @a-hover;
+  }
+  .modal-footer>button:last-child{
+    .a-btn(@border-color, #BABABA,14px);
+    background: @body-bg;
+    margin-left: 43px;
+  }
+}
+#myModal1{
+  input{
+    width: 350px;
+  }
+  //日期
+  .input-daterange{
+    position: relative;
+    bottom: 10px;
+  }
+}
+#project2{
+  width: 554px;
+  .sui-form{
+    .areas{
+      input{
+        width: 176px;
+        height: 36px;
+        margin-right: -3px;
+      }
+      input:first-child{
+        margin-right: 46px;
+      }
+      span{
+        position: relative;
+        right: 190px;
+      }
+    }
+    .control-group{
+      height: 36px;
+    }
+  }
+  //容积率，建筑密度输入框
+  #plotRatio1,#plotRatio2,#buildingDensity1,#buildingDensity2{
+    width: 102px;
+  }
+  //大于小于右外边距
+  span{
+    margin-right: 15px;
+  }
+}
+//土地基本信息样式
+#project2{
+  input{
+    width: 388px;
+  }
+}
+//右侧.controls
+#basic-gt{
+  .controls{
+    position: relative;
+    left: 9px;
+  }
+  //图片位置微调
+  img{
+    margin-left: 10px;
+  }
+}
+//土地基本信息右侧label
+#basic-gt .label-first{
+  position: relative;
+  top:8px;
+}
+//下拉框
+#basic-gt>form>div:first-child{
+  margin-bottom: 25px;
+}
+#basic-gt>form>div>label{
+  position: relative;
+  top:0;
+}
+//土地交易模态框
+#deal-gt>form>div:first-child{
+  margin-bottom: 25px;
+}
+#deal-gt>form>div>label{
+  position: relative;
+  top:0;
+}
+#deal-gt .label-first{
+  position: relative;
+  top:8px;
+}
+//土地交易信息
+#project3{
+  width: 554px;
+  .sui-form{
+    .dropdown-inner{
+      left: 15px;
+    }
+  }
+  .star-gt>img{
+    left: 565px;
+    bottom: 30px;
+  }
+}
+//土地交易信息后三行输入框的宽度设置
+#startingPrice,#planePrice,#margin,#dealPrice,#premiumRate,#markUp{
+  width: 402px;
+  margin-right: 5px;
+}
+//右侧日期选框
+#deal-gt,#project3{
+  //日期选择框下外边距0
+  .star-gt{
+    margin-bottom: 0;
+    label{
+      position: relative;
+      top: -10px;
+    }
+  }
+  .input-daterange{
+    width: 350px;
+  }
+}
+#deal-gt{
+  position: relative;
+  left: 9px;
+  .dropdown-inner{
+    width: 350px;
+  }
+}
+#deal-gt>form>div:nth-child(2){
+  position: relative;
+  top: 9px;
+}

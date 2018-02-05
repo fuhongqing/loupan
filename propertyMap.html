@@ -1,0 +1,117 @@
+    <!--<%&#45;&#45;<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>&#45;&#45;%>-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>易好房地图找房</title>
+		<link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="icon">
+		<link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="shortcut icon">
+		<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/3.2.1/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/propertyMap.css?v=de799524b8" />
+	</head>
+	<body>
+        <!--<%@ include file="head.jsp" %>-->
+		<div class="mainWrap">
+			<div class="header" id="list-model"><a href="index.jsp">列表模式</a></div>
+			<div class="map_tip" id="map_tip">
+				<div class="map_tip_loading">
+					<i class="loading_pic"></i>
+					房源加载中...
+				</div>
+			</div>
+			<div id="allmap">
+			</div>
+			
+			<div class="content">
+				<div class="filterDiv">
+					<div class="filterDiv1">
+						
+						<div class="searchWrap areaSearch" id="r-result">
+							<input type="text" name="search"  id="suggestId"  placeholder="请输入地区搜索" value="" />
+							<span class="searchIcon">
+								<i class="icon-search"></i>
+							</span>
+						</div>
+						<div id="searchResultPanel" style="border:1px solid #C0C0C0;width:180px;height:auto;display:none;"></div>
+						
+						<div class="searchWrap">
+							<input type="text" name="search" id="search" placeholder="请输入楼盘名搜索" value="" />
+							<span class="searchIcon" id="searchBtn">
+								<i class="icon-search"></i>
+							</span>
+						</div>
+					</div>
+					<div class="filterDiv2">
+						<select name="跟进状态" id="FollowType">
+							<option value="" disabled selected>跟进状态</option>
+							<option value="1">待扫盘</option>
+							<option value="2">扫盘中</option>
+							<option value="3">维护中</option>
+							<option value="4">已提报</option>
+							<option value="5">商务谈判</option>
+							<option value="6">合同签订</option>
+							<option value="7">无效盘</option>
+							<option value="">全部</option>
+						</select>
+						<select name="类型" id="BuildingType">
+							<option value="" disabled selected>类型</option>
+							<option value="0">公寓</option>
+							<option value="1">别墅</option>
+							<option value="5">商业</option> 
+							<option value="6">住宅</option> 
+							<option value="7">其他</option> 
+						</select>
+						<select name="货币" id="DealMoney" >
+							<option value="" disabled selected>货币</option>
+							<option value="1">1亿以内</option>
+							<option value="2">1-3亿</option>
+							<option value="3">3-10亿</option>
+							<option value="4">10亿以上</option>
+							<option value="">全部</option>
+						</select>
+					</div>
+				</div>
+				<div class="listDiv">
+					<div class="listTop">
+						项目
+						<span>[102]</span>
+					</div>
+					<ul>
+						<!--<li>
+							<div>
+								<p>水月周庄</p>
+								<p><span>别墅</span><i>维护</i></p>
+							</div>
+							<div>
+								<p>独家代理</p>
+								<p>[上海-松江]斯凯路192号</p>
+							</div>
+							<div>
+								<p>6亿</p>
+								<p>300套</p>
+							</div>
+						</li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>-->
+					</ul>
+				</div>
+				<div class="turn">
+				</div>
+			</div>
+		</div>
+		<!--<div class="box">
+			<h3>水月周庄<span>在售</span></h3>
+			<p>上海-长宁<i>|</i>3亿<i>|</i>500套</p>
+			<b>别墅</b>
+		</div>-->
+		
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=CB2ede775afeb6e413abd40261396a69"></script>
+		<script type="text/javascript" src="js/propertyMap.js?v=7ff07cb952" ></script>
+	</body>
+</html>

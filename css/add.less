@@ -1,0 +1,751 @@
+//引入初始文件
+@import "init";
+//标题
+h1{
+  font-size: 20px;
+  padding:15px 0 8px 0;
+  margin-top: 50px;
+  text-align: left;
+  border-bottom: 1px solid @border-color;
+}
+//头部导航
+header{
+  p{
+    height:36px;
+    line-height: 36px;
+    a{
+      font-size: 12px;
+      color:@text-color;
+    }
+  }
+  //定宽步骤条
+  //步骤条样式模板
+  .step(@label-color,@bar-color,@bc-color,@round-bg){
+    .wrap{
+      .round{
+        background: @round-bg;
+        border-color: @bc-color;
+      }
+      .bar{
+        background: @bar-color;
+      }
+    }
+    label{
+      color: @label-color;
+    }
+  }
+  .sui-steps-round>div{
+    margin-left: -20px;
+  }
+  .sui-steps-round{
+    text-align: center;
+    //新增进度条样式
+    .gt{
+      margin-left: 90px;
+      background:@border-color;
+    }
+    .wrap{
+      .round{
+        line-height: 25px;
+        width: 30px;
+        height: 30px;
+        border-width: 2px;
+      }
+      .bar{
+        width: 90px;
+        height: 2px;
+        position: relative;
+        top: 3px;
+        left: -10px;
+      }
+    }
+    //已完成步骤条
+    .finished{
+      .step(@a-color,@a-color,@a-color,@a-color);
+    }
+    //当前步骤条
+    .current{
+      .step(#999999,@border-color,@border-color,@border-color);
+    }
+    //待完成步骤条
+    .todo{
+      .step(@border-color,@border-color,@border-color,@content-bg);
+      .wrap{
+        .round{
+          color:@border-color;
+        }
+      }
+    }
+    label{
+      position: relative;
+      left: -70px;
+      width: 130px;
+    }
+    #step-first,#step-first1,#step-first2,#step-first3{
+      label{
+        left: -95px;
+      }
+      .gt{
+        background: @border-color;
+      }
+    }
+    #last,#last1,#last2,#last3{
+      label{
+        right: -40px;
+      }
+    }
+  }
+}
+//下拉菜单统一样式
+.dropdown-inner{
+  width: 446px;
+  height: 36px;
+  line-height: 34px;
+  background: @content-bg;
+  position: relative;
+  left: -18px;
+  .dropdown-toggle{
+    left: 0;
+    color: #BEBEBE;//表单中文字颜色
+    .caret{
+      top: 8px;
+      position: relative;
+    }
+    span,.caret{
+      color: #BEBEBE;
+    }
+  }
+  li.active>a{
+    background-color: @a-color;
+  }
+  .sui-dropdown-menu>li>a:hover{
+    color: @content-bg!important;
+    background: @a-color!important;
+  }
+}
+//底部按钮
+footer{
+  border-top: 1px solid transparent;
+  a{
+    .a-btn(@a-color,@a-color,14px);
+    border-radius: 4px;
+    display: inline-block;
+    width: 70px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+  }
+  a.submit,a:hover{
+    color: @content-bg;
+    background: @a-color;
+  }
+  a.submit:hover{
+    color: @content-bg;
+    background: @a-hover;
+  }
+}
+//经纬度
+#find{
+  display: none;
+}
+//建筑类型，甲方支持多选
+.type,.supportType{
+  position: relative;
+  img{
+    position: relative;
+    top: 18px;
+    right: 15px;
+  }
+  .caret{
+    right: 30px;
+    z-index: 5;
+    top: 22px;
+  }
+}
+.supportType{
+  .caret{
+    right: 48px;
+    z-index: 5;
+    top: 17px;
+  }
+}
+#buildingVal,#supportVal{
+  border: 1px solid #ccc;
+  display: inline-block;
+  border-radius: 2px;
+  padding-left: 10px;
+  width: 446px;
+  height: 36px;
+  line-height: 34px;
+  background: #fff;
+  position: relative;
+  left: -18px;
+  font-size: 12px;
+  cursor: pointer;
+  color:#BEBEBE;
+  a{
+    .a-btn(rgba(237,145,39,0.13),@a-color,12px);
+    border-radius: 4px;
+    background: rgba(237,145,39,0.12);
+    display: inline-block;
+    min-width: 73px;
+    height: 24px;
+    line-height: 12px;
+    padding: 5px 0 7px 6px;
+  }
+}
+#buildingVal,#supportVal{
+  b{
+    font-size: 14px;
+    margin-right: 4px;
+    img{
+      top: -1px;
+      right: 0;
+    }
+  }
+}
+#supportVal{
+  left: 15px;
+}
+#BuildingType,#supportType,#CityID0{
+  display: none;
+  border-radius: 0 0 2px 2px;
+  position: absolute;
+  background-color: @content-bg;
+  z-index: 9;
+  max-height: 300px;
+  box-shadow: 2px 2px 0 0 rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+  left: 82px;
+  top: 45px;
+  padding: 5px 0;
+  width: 445px;
+  li{
+    height: 22px;
+    a{
+      display: block;
+      width: 443px;
+      height: 22px;
+      line-height: 22px;
+      padding-left: 8px;
+    }
+    img{
+      display: none;
+      top: 4px;
+    }
+  }
+  a:hover{
+    background: @a-color;
+    color:@content-bg;
+  }
+  li.active{
+    a{
+      color: @a-color;
+    }
+    img{
+      display: inline-block;
+    }
+  }
+}
+//城市
+#CityID0{
+  width: 108px;
+  left: -18px;
+  top: 40px;
+  overflow: auto;
+  li{
+    a{
+      width: 100%;
+    }
+  }
+}
+#supportType{
+  left: 118px;
+  top: 41px;
+  width: 446px;
+}
+//设置各部分过渡动画效果
+#countContent,#cooperate,#addLand{
+  min-height: 1000px;
+  display: none;
+}
+//新增开发基础信息
+#add{
+  //表单组
+  section{
+    div.gt{
+      height: 260px;
+    }
+    .sui-form{
+      .control-group{
+        width: 557px;
+        height: 36px;
+        .control-label{
+          text-align: left;
+          font-size: 14px;
+        }
+      }
+    }
+    .star>img{
+      position: relative;
+      left: -13px;
+      top: 5px;
+    }
+    .star-gt>img{
+      position: relative;
+      left: -13px;
+    }
+    //表单基本设置
+    input{
+      width: 446px;
+      height: 36px !important;
+      margin-left: -18px!important;
+      padding: 10px!important;
+    }
+    //每项表单组基本设置
+    div.gt{
+      width: 554px;
+      margin-top: 60px;
+    }
+    #project1{
+      width: 554px;
+      #area1{
+        margin-right: 20px;
+        display: none;
+        position: relative;
+      }
+      .sui-form{
+        .areas>img{
+          position: relative;
+          left: -107px;
+          top: 5px;
+        }
+        .areas{
+          a{
+            right: 35px;
+          }
+          .dropdown-inner,#cityName{
+            width: 108px;
+            height: 36px;
+            margin-right: 10px;
+          }
+        }
+        .control-group{
+          height: 36px;
+        }
+      }
+    }
+  }
+  section>div.gt{
+    form{
+      position: relative;
+      left: 14px;
+    }
+  }
+  //底部按钮
+  footer{
+    margin-top: 20px;
+    a{
+      margin-right: 13px;
+    }
+    a:hover{
+      color:@content-bg;
+      background: @a-color;
+    }
+  }
+}
+//新增开发体量
+#countContent{
+  //步骤条
+  #step-first2{
+    label{
+      color: #BABABA;
+    }
+    .gt{
+      background:@a-color;
+    }
+  }
+  //表单组
+  section{
+    input{
+      position: relative;
+      left: 5px;
+    }
+    h1{
+      margin-top: -15px;
+      margin-bottom: 20px;
+    }
+    .sui-form{
+      #valid-time{
+        margin-bottom: 0;
+      }
+      #valid-time,#open-time{
+        label{
+          position: relative;
+          bottom: 10px;
+        }
+        input{
+          width: 440px;
+        }
+      }
+      .control-group{
+        .control-label{
+          text-align: left;
+          font-size: 14px;
+        }
+      }
+    }
+    .dropdown-inner{
+      left: -14px;
+    }
+    //
+    //表单基本设置
+    input{
+      width: 446px;
+      height: 36px !important;
+      margin-left: -18px!important;
+      margin-right: 10px;
+      padding: 10px!important;
+    }
+    //每项表单组基本设置
+    div.gt{
+      width: 554px;
+      height: 225px;
+    }
+    //许可证号的样式处理
+    #permit{
+      label{
+        font-size: 12px;
+        position: relative;
+        bottom: 9px;
+      }
+      input{
+        position: relative;
+        right: -100px;
+        bottom: 36px;
+        left: 103px;
+      }
+    }
+    #project2,#sale,#sale-info{
+      width: 554px;
+      .sui-form{
+        .areas{
+          input{
+            width: 176px;
+            height: 36px;
+            margin-right: -3px;
+          }
+          input:first-child{
+            margin-right: 46px;
+          }
+          span{
+            position: relative;
+            right: 190px;
+          }
+        }
+        .control-group{
+          height: 36px;
+        }
+      }
+    }
+    #project2,#count-gt{
+      input{
+        width: 388px;
+      }
+    }
+    #sale{
+      input{
+        width: 440px;
+      }
+      #SaleValidity{
+        border: 1px solid #ccc;
+      }
+    }
+    #sale-info{
+      .dropdown-inner{
+        width: 440px;
+        img{
+          position: relative;
+          left: 23px;
+          top: 9px;
+        }
+      }
+    }
+  }
+  section>div .controls{
+    position: relative;
+    left: 27px;
+  }
+  //底部按钮
+  footer{
+    position: relative;
+    top: -20px;
+  }
+}
+//新增开发合作
+#cooperate{
+  //有浮动步骤条
+  #step-first3{
+    .gt{
+      background:@a-color;
+    }
+  }
+  #step-first3,#count3{
+    label{
+      color: #BABABA;
+    }
+  }
+  //表单组
+  section{
+    //时间段
+    #time{
+      a.gt{
+        position: relative;
+        top: 11px;
+        right: 72px;
+        z-index: 9;
+      }
+      .areas{
+        display: none;
+        position: relative;
+        bottom: 5px;
+        label{
+          padding: 10px 0;
+          margin-bottom: 5px;
+          display: inline-block;
+        }
+        .input-daterange{
+          position: relative;
+          left: 100px;
+          bottom: 45px;
+          .controls{
+            //代理时间开始
+            .imgLeft{
+              right: 90px;
+            }
+            span{
+              left: -20px;
+              position: relative;
+              right: 195px;
+            }
+          }
+          .controls>a>img{
+            right: 10px;
+            position: relative;
+            left: 475px;
+            bottom: 30px;
+          }
+        }
+        input{
+          width: 176px;
+          height: 36px;
+          margin-right: -3px;
+        }
+        input:first-child{
+          margin-right: 46px;
+        }
+      }
+    }
+    h1{
+      margin-top: -15px;
+      margin-bottom: 20px;
+    }
+    //图片的大小设置
+    .control-group>img{
+      margin-left: 2px;
+    }
+    .sui-form{
+      .control-group{
+        width: 600px;
+        height: 36px;
+        .control-label{
+          text-align: left;
+          width: 100px;
+          font-size: 14px;
+        }
+      }
+    }
+    .star-gt>img{
+      position: relative;
+      left: -13px;
+    }
+    //表单基本设置
+    input{
+      width: 446px;
+      height: 36px !important;
+      margin-left: -18px!important;
+      padding: 10px!important;
+    }
+    //每项表单组基本设置
+    div.gt{
+      width: 530px;
+      height: 200px;
+      margin-top: 55px;
+    }
+    #project3{
+      width: 554px;
+      .sui-form{
+        .dropdown-inner{
+          left: 15px;
+          img{
+            position: relative;
+            left: 23px;
+            top: 9px;
+          }
+        }
+      }
+      .star-gt{
+        display: none;
+        input{
+          position: relative;
+          left: 33px;
+        }
+      }
+      .star-gt>img{
+        left: 565px;
+        bottom: 30px;
+      }
+      #saleTy{
+        .caret{
+          left: 11px;
+        }
+      }
+    }
+    //新增按钮
+    #contacts{
+      a{
+        width: 70px;
+        height: 26px;
+        text-align: center;
+        line-height: 26px;
+        background: @a-color;
+        border-radius: 4px;
+        color: @content-bg;
+        margin-top: 17px;
+      }
+    }
+    //表格
+    #tbl{
+      tr{
+        height: 50px;
+      }
+      .sui-form{
+        margin: 0;
+        .control-group{
+          margin: 0;
+        }
+      }
+      thead{
+        th{
+          text-align: center;
+          line-height: 37px;
+          font-size: 18px;
+        }
+      }
+      tbody>tr:first-child>td:not(:first-child){
+        input{
+          left: 75px;
+          position: relative;
+        }
+        .control-group>img{
+          left: 74px;
+          top: 0;
+        }
+      }
+      tbody>tr:not(:first-child)>td{
+        text-align: center;
+      }
+      .star-gt{
+        width: 234px;
+        input{
+          width: 234px;
+          height: 36px;
+        }
+        .dropdown-inner{
+          width: 234px;
+          position: relative;
+          left: 70px;
+        }
+      }
+      .control-group>img{
+        position: relative;
+        left: 69px;
+        top: 7px;
+      }
+    }
+  }
+}
+//新增开发土地
+#addLand{
+  //时间图标
+  .input-daterange img {
+    right: 40px;
+  }
+  //有浮动步骤条
+  #step-first{
+    .gt{
+      background:@a-color;
+    }
+  }
+  #step-first,#count,#coop{
+    label{
+      color: #BABABA;
+    }
+  }
+  //表单组
+  section{
+    //土地情况
+    #land,#project,#floor-gt,#floor{
+      .sui-form{
+        .controls{
+          position: relative;
+          left: 27px;
+        }
+      }
+    }
+    h1{
+      margin-top: -15px;
+      margin-bottom: 20px;
+    }
+    .sui-form{
+      .control-group{
+        height: 36px;
+        .control-label{
+          text-align: left;
+          font-size: 14px;
+        }
+      }
+    }
+    //表单基本设置
+    input{
+      width: 446px;
+      height: 36px !important;
+      margin-left: -18px!important;
+      margin-right: 10px;
+      padding: 10px!important;
+    }
+    //每项表单组基本设置
+    div.gt{
+      width: 554px;
+      height: 200px;
+    }
+    #project{
+      width: 554px;
+    }
+  }
+  #get-time,#floor-gt{
+    width: 537px;
+    .input-daterange{
+      margin-bottom: 0;
+      margin-left: -30px;
+    }
+    input{
+      width: 446px;
+    }
+  }
+  #floor-gt{
+    .sui-form{
+      margin-left: -18px;
+    }
+  }
+}

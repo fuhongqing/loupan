@@ -1,0 +1,829 @@
+body {
+  background: #F8F8F8;
+  font: 14px PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+  overflow: auto;
+}
+a {
+  color: #616161;
+  text-decoration: none;
+}
+a:hover {
+  color: #DB7B0D;
+  text-decoration: none;
+}
+ul,
+ol,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gt {
+  float: right;
+}
+.lf {
+  float: left;
+}
+.content {
+  margin: 0 auto;
+  width: 1200px;
+  min-height: 600px;
+  padding: 0 20px;
+  background: #fff;
+}
+input:focus {
+  outline: none;
+}
+form.sui-form input[type="text"] {
+  font-size: 14px;
+}
+input::-webkit-input-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input:-moz-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input::-moz-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input:-ms-input-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+.sui-form input[type="text"] {
+  box-shadow: none;
+  color: #333333;
+  font-family: 14px PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+}
+.datepicker {
+  cursor: pointer;
+  position: absolute;
+  width: 258px;
+  height: 258px;
+  background: #fff;
+  border: 1px solid #DDDDDD;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
+  border-radius: 2px;
+}
+.datepicker .table-condensed {
+  width: 258px;
+  height: 258px;
+  padding: 15px;
+}
+.datepicker .datepicker-switch {
+  color: #475669;
+}
+.datepicker .dow {
+  color: #8492A6;
+}
+.datepicker .day {
+  text-align: center;
+}
+.datepicker .today {
+  color: #fff;
+  background: #ED9127;
+  width: 32px;
+  height: 32px;
+}
+.datepicker .today:hover {
+  background: #DB7B0D;
+}
+.datepicker .prev,
+.datepicker .next {
+  display: block;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  position: relative;
+}
+.datepicker .prev {
+  border-right: 8px solid #bcbcbc;
+  left: 8px;
+}
+.datepicker .next {
+  border-left: 8px solid #bcbcbc;
+  right: -12px;
+}
+.datepicker .datepicker-months span,
+.datepicker .datepicker-years span {
+  display: inline-block;
+  width: 55px;
+  line-height: 5;
+}
+.datepicker .datepicker-months .table-condensed td,
+.datepicker .datepicker-years .table-condensed td {
+  position: relative;
+  left: 12px;
+}
+.input-daterange img {
+  position: relative;
+  right: 30px;
+}
+.input-daterange .agentBegin {
+  right: 90px;
+}
+.dropdown-inner span {
+  color: #333333;
+  font-size: 14px;
+}
+h1 {
+  font-size: 20px;
+  padding: 15px 0 8px 0;
+  margin-top: 50px;
+  text-align: left;
+  border-bottom: 1px solid #DDDDDD;
+}
+header p {
+  height: 36px;
+  line-height: 36px;
+}
+header p a {
+  font-size: 12px;
+  color: #333333;
+}
+header .sui-steps-round > div {
+  margin-left: -20px;
+}
+header .sui-steps-round {
+  text-align: center;
+}
+header .sui-steps-round .gt {
+  margin-left: 90px;
+  background: #DDDDDD;
+}
+header .sui-steps-round .wrap .round {
+  line-height: 25px;
+  width: 30px;
+  height: 30px;
+  border-width: 2px;
+}
+header .sui-steps-round .wrap .bar {
+  width: 90px;
+  height: 2px;
+  position: relative;
+  top: 3px;
+  left: -10px;
+}
+header .sui-steps-round .finished .wrap .round {
+  background: #ED9127;
+  border-color: #ED9127;
+}
+header .sui-steps-round .finished .wrap .bar {
+  background: #ED9127;
+}
+header .sui-steps-round .finished label {
+  color: #ED9127;
+}
+header .sui-steps-round .current .wrap .round {
+  background: #DDDDDD;
+  border-color: #DDDDDD;
+}
+header .sui-steps-round .current .wrap .bar {
+  background: #DDDDDD;
+}
+header .sui-steps-round .current label {
+  color: #999999;
+}
+header .sui-steps-round .todo .wrap .round {
+  background: #fff;
+  border-color: #DDDDDD;
+}
+header .sui-steps-round .todo .wrap .bar {
+  background: #DDDDDD;
+}
+header .sui-steps-round .todo label {
+  color: #DDDDDD;
+}
+header .sui-steps-round .todo .wrap .round {
+  color: #DDDDDD;
+}
+header .sui-steps-round label {
+  position: relative;
+  left: -70px;
+  width: 130px;
+}
+header .sui-steps-round #step-first label,
+header .sui-steps-round #step-first1 label,
+header .sui-steps-round #step-first2 label,
+header .sui-steps-round #step-first3 label {
+  left: -95px;
+}
+header .sui-steps-round #step-first .gt,
+header .sui-steps-round #step-first1 .gt,
+header .sui-steps-round #step-first2 .gt,
+header .sui-steps-round #step-first3 .gt {
+  background: #DDDDDD;
+}
+header .sui-steps-round #last label,
+header .sui-steps-round #last1 label,
+header .sui-steps-round #last2 label,
+header .sui-steps-round #last3 label {
+  right: -40px;
+}
+.dropdown-inner {
+  width: 446px;
+  height: 36px;
+  line-height: 34px;
+  background: #fff;
+  position: relative;
+  left: -18px;
+}
+.dropdown-inner .dropdown-toggle {
+  left: 0;
+  color: #BEBEBE;
+}
+.dropdown-inner .dropdown-toggle .caret {
+  top: 8px;
+  position: relative;
+}
+.dropdown-inner .dropdown-toggle span,
+.dropdown-inner .dropdown-toggle .caret {
+  color: #BEBEBE;
+}
+.dropdown-inner li.active > a {
+  background-color: #ED9127;
+}
+.dropdown-inner .sui-dropdown-menu > li > a:hover {
+  color: #fff !important;
+  background: #ED9127 !important;
+}
+footer {
+  border-top: 1px solid transparent;
+}
+footer a {
+  border: 1px solid #ED9127;
+  color: #ED9127;
+  font-size: 14px;
+  border-radius: 4px;
+  display: inline-block;
+  width: 70px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+}
+footer a.submit,
+footer a:hover {
+  color: #fff;
+  background: #ED9127;
+}
+footer a.submit:hover {
+  color: #fff;
+  background: #DB7B0D;
+}
+#find {
+  display: none;
+}
+.type,
+.supportType {
+  position: relative;
+}
+.type img,
+.supportType img {
+  position: relative;
+  top: 18px;
+  right: 15px;
+}
+.type .caret,
+.supportType .caret {
+  right: 30px;
+  z-index: 5;
+  top: 22px;
+}
+.supportType .caret {
+  right: 48px;
+  z-index: 5;
+  top: 17px;
+}
+#buildingVal,
+#supportVal {
+  border: 1px solid #ccc;
+  display: inline-block;
+  border-radius: 2px;
+  padding-left: 10px;
+  width: 446px;
+  height: 36px;
+  line-height: 34px;
+  background: #fff;
+  position: relative;
+  left: -18px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #BEBEBE;
+}
+#buildingVal a,
+#supportVal a {
+  border: 1px solid rgba(237, 145, 39, 0.13);
+  color: #ED9127;
+  font-size: 12px;
+  border-radius: 4px;
+  background: rgba(237, 145, 39, 0.12);
+  display: inline-block;
+  min-width: 73px;
+  height: 24px;
+  line-height: 12px;
+  padding: 5px 0 7px 6px;
+}
+#buildingVal b,
+#supportVal b {
+  font-size: 14px;
+  margin-right: 4px;
+}
+#buildingVal b img,
+#supportVal b img {
+  top: -1px;
+  right: 0;
+}
+#supportVal {
+  left: 15px;
+}
+#BuildingType,
+#supportType,
+#CityID0 {
+  display: none;
+  border-radius: 0 0 2px 2px;
+  position: absolute;
+  background-color: #fff;
+  z-index: 9;
+  max-height: 300px;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  left: 82px;
+  top: 45px;
+  padding: 5px 0;
+  width: 445px;
+}
+#BuildingType li,
+#supportType li,
+#CityID0 li {
+  height: 22px;
+}
+#BuildingType li a,
+#supportType li a,
+#CityID0 li a {
+  display: block;
+  width: 443px;
+  height: 22px;
+  line-height: 22px;
+  padding-left: 8px;
+}
+#BuildingType li img,
+#supportType li img,
+#CityID0 li img {
+  display: none;
+  top: 4px;
+}
+#BuildingType a:hover,
+#supportType a:hover,
+#CityID0 a:hover {
+  background: #ED9127;
+  color: #fff;
+}
+#BuildingType li.active a,
+#supportType li.active a,
+#CityID0 li.active a {
+  color: #ED9127;
+}
+#BuildingType li.active img,
+#supportType li.active img,
+#CityID0 li.active img {
+  display: inline-block;
+}
+#CityID0 {
+  width: 108px;
+  left: -18px;
+  top: 40px;
+  overflow: auto;
+}
+#CityID0 li a {
+  width: 100%;
+}
+#supportType {
+  left: 118px;
+  top: 41px;
+  width: 446px;
+}
+#countContent,
+#cooperate,
+#addLand {
+  min-height: 1000px;
+  display: none;
+}
+#add section div.gt {
+  height: 260px;
+}
+#add section .sui-form .control-group {
+  width: 557px;
+  height: 36px;
+}
+#add section .sui-form .control-group .control-label {
+  text-align: left;
+  font-size: 14px;
+}
+#add section .star > img {
+  position: relative;
+  left: -13px;
+  top: 5px;
+}
+#add section .star-gt > img {
+  position: relative;
+  left: -13px;
+}
+#add section input {
+  width: 446px;
+  height: 36px !important;
+  margin-left: -18px !important;
+  padding: 10px!important;
+}
+#add section div.gt {
+  width: 554px;
+  margin-top: 60px;
+}
+#add section #project1 {
+  width: 554px;
+}
+#add section #project1 #area1 {
+  margin-right: 20px;
+  display: none;
+  position: relative;
+}
+#add section #project1 .sui-form .areas > img {
+  position: relative;
+  left: -107px;
+  top: 5px;
+}
+#add section #project1 .sui-form .areas a {
+  right: 35px;
+}
+#add section #project1 .sui-form .areas .dropdown-inner,
+#add section #project1 .sui-form .areas #cityName {
+  width: 108px;
+  height: 36px;
+  margin-right: 10px;
+}
+#add section #project1 .sui-form .control-group {
+  height: 36px;
+}
+#add section > div.gt form {
+  position: relative;
+  left: 14px;
+}
+#add footer {
+  margin-top: 20px;
+}
+#add footer a {
+  margin-right: 13px;
+}
+#add footer a:hover {
+  color: #fff;
+  background: #ED9127;
+}
+#countContent #step-first2 label {
+  color: #BABABA;
+}
+#countContent #step-first2 .gt {
+  background: #ED9127;
+}
+#countContent section input {
+  position: relative;
+  left: 5px;
+}
+#countContent section h1 {
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+#countContent section .sui-form #valid-time {
+  margin-bottom: 0;
+}
+#countContent section .sui-form #valid-time label,
+#countContent section .sui-form #open-time label {
+  position: relative;
+  bottom: 10px;
+}
+#countContent section .sui-form #valid-time input,
+#countContent section .sui-form #open-time input {
+  width: 440px;
+}
+#countContent section .sui-form .control-group .control-label {
+  text-align: left;
+  font-size: 14px;
+}
+#countContent section .dropdown-inner {
+  left: -14px;
+}
+#countContent section input {
+  width: 446px;
+  height: 36px !important;
+  margin-left: -18px !important;
+  margin-right: 10px;
+  padding: 10px!important;
+}
+#countContent section div.gt {
+  width: 554px;
+  height: 225px;
+}
+#countContent section #permit label {
+  font-size: 12px;
+  position: relative;
+  bottom: 9px;
+}
+#countContent section #permit input {
+  position: relative;
+  right: -100px;
+  bottom: 36px;
+  left: 103px;
+}
+#countContent section #project2,
+#countContent section #sale,
+#countContent section #sale-info {
+  width: 554px;
+}
+#countContent section #project2 .sui-form .areas input,
+#countContent section #sale .sui-form .areas input,
+#countContent section #sale-info .sui-form .areas input {
+  width: 176px;
+  height: 36px;
+  margin-right: -3px;
+}
+#countContent section #project2 .sui-form .areas input:first-child,
+#countContent section #sale .sui-form .areas input:first-child,
+#countContent section #sale-info .sui-form .areas input:first-child {
+  margin-right: 46px;
+}
+#countContent section #project2 .sui-form .areas span,
+#countContent section #sale .sui-form .areas span,
+#countContent section #sale-info .sui-form .areas span {
+  position: relative;
+  right: 190px;
+}
+#countContent section #project2 .sui-form .control-group,
+#countContent section #sale .sui-form .control-group,
+#countContent section #sale-info .sui-form .control-group {
+  height: 36px;
+}
+#countContent section #project2 input,
+#countContent section #count-gt input {
+  width: 388px;
+}
+#countContent section #sale input {
+  width: 440px;
+}
+#countContent section #sale #SaleValidity {
+  border: 1px solid #ccc;
+}
+#countContent section #sale-info .dropdown-inner {
+  width: 440px;
+}
+#countContent section #sale-info .dropdown-inner img {
+  position: relative;
+  left: 23px;
+  top: 9px;
+}
+#countContent section > div .controls {
+  position: relative;
+  left: 27px;
+}
+#countContent footer {
+  position: relative;
+  top: -20px;
+}
+#cooperate #step-first3 .gt {
+  background: #ED9127;
+}
+#cooperate #step-first3 label,
+#cooperate #count3 label {
+  color: #BABABA;
+}
+#cooperate section #time a.gt {
+  position: relative;
+  top: 11px;
+  right: 72px;
+  z-index: 9;
+}
+#cooperate section #time .areas {
+  display: none;
+  position: relative;
+  bottom: 5px;
+}
+#cooperate section #time .areas label {
+  padding: 10px 0;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+#cooperate section #time .areas .input-daterange {
+  position: relative;
+  left: 100px;
+  bottom: 45px;
+}
+#cooperate section #time .areas .input-daterange .controls .imgLeft {
+  right: 90px;
+}
+#cooperate section #time .areas .input-daterange .controls span {
+  left: -20px;
+  position: relative;
+  right: 195px;
+}
+#cooperate section #time .areas .input-daterange .controls > a > img {
+  right: 10px;
+  position: relative;
+  left: 475px;
+  bottom: 30px;
+}
+#cooperate section #time .areas input {
+  width: 176px;
+  height: 36px;
+  margin-right: -3px;
+}
+#cooperate section #time .areas input:first-child {
+  margin-right: 46px;
+}
+#cooperate section h1 {
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+#cooperate section .control-group > img {
+  margin-left: 2px;
+}
+#cooperate section .sui-form .control-group {
+  width: 600px;
+  height: 36px;
+}
+#cooperate section .sui-form .control-group .control-label {
+  text-align: left;
+  width: 100px;
+  font-size: 14px;
+}
+#cooperate section .star-gt > img {
+  position: relative;
+  left: -13px;
+}
+#cooperate section input {
+  width: 446px;
+  height: 36px !important;
+  margin-left: -18px !important;
+  padding: 10px!important;
+}
+#cooperate section div.gt {
+  width: 530px;
+  height: 200px;
+  margin-top: 55px;
+}
+#cooperate section #project3 {
+  width: 554px;
+}
+#cooperate section #project3 .sui-form .dropdown-inner {
+  left: 15px;
+}
+#cooperate section #project3 .sui-form .dropdown-inner img {
+  position: relative;
+  left: 23px;
+  top: 9px;
+}
+#cooperate section #project3 .star-gt {
+  display: none;
+}
+#cooperate section #project3 .star-gt input {
+  position: relative;
+  left: 33px;
+}
+#cooperate section #project3 .star-gt > img {
+  left: 565px;
+  bottom: 30px;
+}
+#cooperate section #project3 #saleTy .caret {
+  left: 11px;
+}
+#cooperate section #contacts a {
+  width: 70px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  background: #ED9127;
+  border-radius: 4px;
+  color: #fff;
+  margin-top: 17px;
+}
+#cooperate section #tbl tr {
+  height: 50px;
+}
+#cooperate section #tbl .sui-form {
+  margin: 0;
+}
+#cooperate section #tbl .sui-form .control-group {
+  margin: 0;
+}
+#cooperate section #tbl thead th {
+  text-align: center;
+  line-height: 37px;
+  font-size: 18px;
+}
+#cooperate section #tbl tbody > tr:first-child > td:not(:first-child) input {
+  left: 75px;
+  position: relative;
+}
+#cooperate section #tbl tbody > tr:first-child > td:not(:first-child) .control-group > img {
+  left: 74px;
+  top: 0;
+}
+#cooperate section #tbl tbody > tr:not(:first-child) > td {
+  text-align: center;
+}
+#cooperate section #tbl .star-gt {
+  width: 234px;
+}
+#cooperate section #tbl .star-gt input {
+  width: 234px;
+  height: 36px;
+}
+#cooperate section #tbl .star-gt .dropdown-inner {
+  width: 234px;
+  position: relative;
+  left: 70px;
+}
+#cooperate section #tbl .control-group > img {
+  position: relative;
+  left: 69px;
+  top: 7px;
+}
+#addLand .input-daterange img {
+  right: 40px;
+}
+#addLand #step-first .gt {
+  background: #ED9127;
+}
+#addLand #step-first label,
+#addLand #count label,
+#addLand #coop label {
+  color: #BABABA;
+}
+#addLand section #land .sui-form .controls,
+#addLand section #project .sui-form .controls,
+#addLand section #floor-gt .sui-form .controls,
+#addLand section #floor .sui-form .controls {
+  position: relative;
+  left: 27px;
+}
+#addLand section h1 {
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+#addLand section .sui-form .control-group {
+  height: 36px;
+}
+#addLand section .sui-form .control-group .control-label {
+  text-align: left;
+  font-size: 14px;
+}
+#addLand section input {
+  width: 446px;
+  height: 36px !important;
+  margin-left: -18px !important;
+  margin-right: 10px;
+  padding: 10px!important;
+}
+#addLand section div.gt {
+  width: 554px;
+  height: 200px;
+}
+#addLand section #project {
+  width: 554px;
+}
+#addLand #get-time,
+#addLand #floor-gt {
+  width: 537px;
+}
+#addLand #get-time .input-daterange,
+#addLand #floor-gt .input-daterange {
+  margin-bottom: 0;
+  margin-left: -30px;
+}
+#addLand #get-time input,
+#addLand #floor-gt input {
+  width: 446px;
+}
+#addLand #floor-gt .sui-form {
+  margin-left: -18px;
+}

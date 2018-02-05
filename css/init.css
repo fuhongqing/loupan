@@ -1,0 +1,152 @@
+body {
+  background: #F8F8F8;
+  font: 14px PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+  overflow: auto;
+}
+a {
+  color: #616161;
+  text-decoration: none;
+}
+a:hover {
+  color: #DB7B0D;
+  text-decoration: none;
+}
+ul,
+ol,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gt {
+  float: right;
+}
+.lf {
+  float: left;
+}
+.content {
+  margin: 0 auto;
+  width: 1200px;
+  min-height: 600px;
+  padding: 0 20px;
+  background: #fff;
+}
+input:focus {
+  outline: none;
+}
+form.sui-form input[type="text"] {
+  font-size: 14px;
+}
+input::-webkit-input-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input:-moz-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input::-moz-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input:-ms-input-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+.sui-form input[type="text"] {
+  box-shadow: none;
+  color: #333333;
+  font-family: 14px PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+}
+.datepicker {
+  cursor: pointer;
+  position: absolute;
+  width: 258px;
+  height: 258px;
+  background: #fff;
+  border: 1px solid #DDDDDD;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
+  border-radius: 2px;
+}
+.datepicker .table-condensed {
+  width: 258px;
+  height: 258px;
+  padding: 15px;
+}
+.datepicker .datepicker-switch {
+  color: #475669;
+}
+.datepicker .dow {
+  color: #8492A6;
+}
+.datepicker .day {
+  text-align: center;
+}
+.datepicker .today {
+  color: #fff;
+  background: #ED9127;
+  width: 32px;
+  height: 32px;
+}
+.datepicker .today:hover {
+  background: #DB7B0D;
+}
+.datepicker .prev,
+.datepicker .next {
+  display: block;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  position: relative;
+}
+.datepicker .prev {
+  border-right: 8px solid #bcbcbc;
+  left: 8px;
+}
+.datepicker .next {
+  border-left: 8px solid #bcbcbc;
+  right: -12px;
+}
+.datepicker .datepicker-months span,
+.datepicker .datepicker-years span {
+  display: inline-block;
+  width: 55px;
+  line-height: 5;
+}
+.datepicker .datepicker-months .table-condensed td,
+.datepicker .datepicker-years .table-condensed td {
+  position: relative;
+  left: 12px;
+}
+.input-daterange img {
+  position: relative;
+  right: 30px;
+}
+.input-daterange .agentBegin {
+  right: 90px;
+}
+.dropdown-inner span {
+  color: #333333;
+  font-size: 14px;
+}

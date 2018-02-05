@@ -1,0 +1,180 @@
+@charset "utf-8";
+html,body,ul,li,p,img,dl {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 12px/20px "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+	background: #fff;
+	width: 100%;
+	height:100%;
+	overflow: hidden;
+	overflow-x: scroll;
+}
+html{
+	width: 100%;
+	height:100%;
+}
+li {
+	list-style: none;
+}
+a {
+	color: #666;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:visited {
+	color: #666;
+}
+
+#myframe{
+	/*overflow: hidden;*/
+	height: 100%;
+	width: 100%;
+	margin: -50px auto;
+	border: 0;
+}
+
+
+.topWrap{
+	width: 98.75%;
+	background: #333;
+	position: relative;
+}
+
+.top {
+	height: 50px;
+	width: 1200px;
+	margin: 0 auto;
+	background: #333;
+}
+
+.logo {
+	height: 40px;
+	width: 113px;
+	margin-top:5px;
+	float: left;
+}
+
+.logo img {
+	border: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.nav {
+	float: right;
+	list-style: none;
+	font-size: 16px;
+}
+
+.nav li {
+	position: relative;
+	list-style: none;
+	color: #999;
+	height: 46px;
+	line-height: 48px;
+	text-align: center;
+	cursor: pointer;
+	margin: 0 20px;
+	float: left;
+}
+
+.nav .navActive1 {
+	color: #fff;
+}
+.nav .navActive {
+	color: #fff;
+}
+.nav li div{
+	display: none;
+	position: absolute;
+	z-index: 999999;
+	top: 48px;
+	left: -30px;
+	padding-top:8px;
+	width: 152px;
+
+}
+.nav li div dl{
+	width: 150px;
+	line-height: 36px;
+	font-size: 14px;
+	text-align: left;
+	border-radius: 2px;
+	background: #fff;
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12), 0 0 6px 0 rgba(0,0,0,0.04);
+}
+
+.nav li div p {
+	height: 36px;
+	line-height: 36px;
+	background: #fff;
+	color: #333;
+}
+.nav li div p a{
+	display: block;
+	padding-left: 10px;
+}
+
+.nav li div .navItemActive {
+	background: #ED9127;
+}
+.nav li div .navItemActive a{
+	color: #fff;
+}
+.nav li div .navItemActive1 {
+	background: #ED9127;
+}
+.nav li div .navItemActive1 a{
+	color: #fff;
+}
+
+
+.prokf div span {
+	border-style: dashed dashed solid dashed;
+	border-color: transparent transparent #ffffff transparent;
+	border-width: 10px;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	position: absolute;
+	top: -18px;
+	left: 32px;
+}
+
+.mine {
+	height: 50px;
+	width: 64px;
+	float: right;
+}
+
+.mine div {
+	width: 30px;
+	height: 30px;
+	background: url('../img/mine.png') no-repeat center center;
+	background-size: contain;
+	margin: 10px 10px 0 0;
+	float: left;
+}
+
+.mine a {
+	color: #ED9127;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	font-size: 12px;
+}
+
+@media screen and (max-width: 1200px) {
+	#myframe{
+		width: 1200px;
+	}
+	.top {
+		width: 1143px;
+		padding: 0 20px;
+	}
+}

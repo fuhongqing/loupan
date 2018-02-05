@@ -1,0 +1,455 @@
+body {
+  background: #F8F8F8;
+  font: 14px PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+  overflow: auto;
+}
+a {
+  color: #616161;
+  text-decoration: none;
+}
+a:hover {
+  color: #DB7B0D;
+  text-decoration: none;
+}
+ul,
+ol,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gt {
+  float: right;
+}
+.lf {
+  float: left;
+}
+.content {
+  margin: 0 auto;
+  width: 1200px;
+  min-height: 600px;
+  padding: 0 20px;
+  background: #fff;
+}
+input:focus {
+  outline: none;
+}
+form.sui-form input[type="text"] {
+  font-size: 14px;
+}
+input::-webkit-input-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input:-moz-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input::-moz-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input:-ms-input-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+.sui-form input[type="text"] {
+  box-shadow: none;
+  color: #333333;
+  font-family: 14px PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+}
+.datepicker {
+  cursor: pointer;
+  position: absolute;
+  width: 258px;
+  height: 258px;
+  background: #fff;
+  border: 1px solid #DDDDDD;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
+  border-radius: 2px;
+}
+.datepicker .table-condensed {
+  width: 258px;
+  height: 258px;
+  padding: 15px;
+}
+.datepicker .datepicker-switch {
+  color: #475669;
+}
+.datepicker .dow {
+  color: #8492A6;
+}
+.datepicker .day {
+  text-align: center;
+}
+.datepicker .today {
+  color: #fff;
+  background: #ED9127;
+  width: 32px;
+  height: 32px;
+}
+.datepicker .today:hover {
+  background: #DB7B0D;
+}
+.datepicker .prev,
+.datepicker .next {
+  display: block;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  position: relative;
+}
+.datepicker .prev {
+  border-right: 8px solid #bcbcbc;
+  left: 8px;
+}
+.datepicker .next {
+  border-left: 8px solid #bcbcbc;
+  right: -12px;
+}
+.datepicker .datepicker-months span,
+.datepicker .datepicker-years span {
+  display: inline-block;
+  width: 55px;
+  line-height: 5;
+}
+.datepicker .datepicker-months .table-condensed td,
+.datepicker .datepicker-years .table-condensed td {
+  position: relative;
+  left: 12px;
+}
+.input-daterange img {
+  position: relative;
+  right: 30px;
+}
+.input-daterange .agentBegin {
+  right: 90px;
+}
+.dropdown-inner span {
+  color: #333333;
+  font-size: 14px;
+}
+header {
+  margin-top: 50px;
+  height: 58px;
+  border-bottom: 1px solid #DDDDDD;
+  border-top: 1px solid transparent;
+}
+header h1 {
+  font-size: 20px;
+  margin: 30px 0 8px 0;
+  line-height: 1;
+}
+header div a {
+  display: inline-block;
+  border-radius: 4px;
+  width: 90px;
+  height: 32px;
+  padding: 6px 15px;
+  margin: 18px 0 8px 0;
+  background: #F8F8F8;
+  border: 1px solid #DDDDDD;
+  color: #333333;
+  font-size: 14px;
+}
+header div a:first-child {
+  margin-right: 20px;
+}
+header div a.active {
+  border: 1px solid #ED9127;
+  color: #ED9127;
+  font-size: 14px;
+  background: #fff;
+}
+section p {
+  height: 36px;
+  line-height: 36px;
+}
+section p a {
+  font-size: 12px;
+}
+section li.title {
+  font-weight: bold;
+}
+section div {
+  background: #F8F8F8;
+}
+section div ul li {
+  float: left;
+  margin: 10px 25px 0 0;
+}
+section div ul li a {
+  font-size: 14px;
+  cursor: pointer;
+}
+section div ul li:first-child {
+  margin-left: 10px;
+}
+section div ul li.active a {
+  color: #ED9127;
+}
+section div p {
+  text-align: center;
+}
+section div p a {
+  font-size: 12px;
+  cursor: pointer;
+  color: #BABABA;
+}
+section #more {
+  padding-bottom: 10px;
+}
+section #more .total {
+  margin-left: 68px;
+  margin-top: 16px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  min-height: 40px;
+  background: #fff;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  display: none;
+}
+section #more .total #borough {
+  margin-top: -10px;
+  width: 960px;
+}
+section #more #limit {
+  margin-top: -10px;
+  margin-left: 5px;
+}
+section #more #limit li.all {
+  margin-left: -5px;
+}
+section #plate {
+  display: none;
+  width: 590px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  min-height: 40px;
+  background: #fff;
+  position: absolute;
+  left: 235px;
+  top: 177px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  z-index: 5;
+}
+section #plate #plateTotal {
+  margin-top: -10px;
+  width: 580px;
+}
+section #plate > ul > li {
+  float: left;
+  margin-right: 15px;
+}
+section #plate > ul > li span {
+  color: #ED9127;
+  margin-right: 5px;
+}
+section #plate > ul > li > a:last-child {
+  margin-left: 15px;
+}
+section #plate > ul > li:first-child {
+  margin-left: 0;
+}
+section #plate > img {
+  position: absolute;
+  top: 12px;
+  left: -12px;
+}
+section #plate > img.caret-right {
+  display: none;
+  left: 584px;
+}
+#search {
+  height: 56px;
+  background: #fff;
+}
+#search .btns a {
+  display: inline-block;
+  width: 90px;
+  height: 32px;
+  font-size: 14px;
+  padding: 6px 3px;
+  color: #fff;
+  background: #ED9127;
+  margin: 12px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+#search .btns a:hover {
+  background: #DB7B0D;
+}
+#search .input-append {
+  margin: 10px 0;
+  width: 300px;
+  border-radius: 4px;
+}
+#search .input-append input {
+  width: 264px;
+  height: 36px;
+  line-height: 36px;
+  vertical-align: middle;
+  border-radius: 4px 0 0 4px;
+}
+#search .input-append span {
+  display: inline-block;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  line-height: 25px;
+  background: #FCFBF9;
+  border-radius: 0 4px 4px 0;
+}
+#items {
+  position: relative;
+  top: -18px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background: #fff;
+  border: 1px solid #DDDDDD;
+}
+#items tr {
+  height: 50px;
+  border-bottom: 1px solid #DDDDDD;
+}
+#items tr:last-child {
+  border-bottom: none;
+}
+#items thead tr {
+  height: 51px;
+}
+#items thead th {
+  line-height: 2.1;
+  font-size: 16px;
+  border-right: 1px solid #DDDDDD;
+  vertical-align: middle;
+}
+#items thead th .up-img {
+  position: relative;
+  bottom: 5px;
+  left: 22px;
+}
+#items thead th .down-img {
+  position: relative;
+  top: 5px;
+}
+#items thead th:first-child {
+  width: 245px;
+}
+#items thead th:first-child span {
+  color: #ED9127;
+}
+#items thead th:last-child {
+  border-right: none;
+}
+#items tbody td {
+  font-size: 14px;
+  border-right: 1px solid #DDDDDD;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+#items tbody td p {
+  color: #BABABA;
+  font-size: 12px;
+}
+#items tbody td .states > a.landState {
+  display: inline-block;
+  width: 46px;
+  text-align: center;
+  height: 20px;
+  line-height: 15px;
+}
+#items tbody td:first-child {
+  width: 305px;
+  cursor: auto;
+}
+#items tbody td:first-child div.states a {
+  margin-left: 10px;
+  padding: 1px 2px;
+  border-radius: 2px;
+  border: 1px solid #CB4958;
+  color: #CB4958;
+  font-size: 10px;
+}
+#items tbody td:first-child div.states a.planningPurposes {
+  border: 1px solid #ED9127;
+  color: #ED9127;
+  font-size: 10px;
+}
+#items tbody td:first-child div.states a:last-child {
+  border: 1px solid #7EE6CF;
+  color: #7EE6CF;
+  font-size: 10px;
+}
+#items tbody td:last-child {
+  border-right: none;
+}
+#items tbody tr:nth-child(2n-1) {
+  background: #F8F8F8;
+}
+#pages {
+  min-height: 92px;
+}
+#pages li {
+  float: left;
+  height: 28px;
+  line-height: 26px;
+  text-align: center;
+}
+#pages li a {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 13px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #DDDDDD;
+  border-left: none;
+  color: #333333;
+  border-color: #DDDDDD;
+}
+#pages li #pageNum > li > a:hover {
+  color: #fff;
+  background: #ED9127;
+  border-color: #ED9127;
+}
+#pages li #pageNum > li.active > a:hover {
+  background: #DB7B0D;
+}
+#pages li.prev > a {
+  border-left: 1px solid #DDDDDD;
+}
+#pages li.active a {
+  color: #fff;
+  background: #ED9127;
+  border-color: #ED9127;
+}
+#pages li.disabled a {
+  background: #EEEEEE;
+  color: #DDDDDD;
+}

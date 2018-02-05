@@ -1,0 +1,375 @@
+//引入初始文件
+@import "init";
+//标题
+h1{
+  font-size: 20px;
+  padding:15px 0 8px 0;
+  margin-top: 50px;
+  text-align: left;
+  border-bottom: 1px solid @border-color;
+}
+.content{
+  top: -20px;
+}
+//.content
+.content{
+  min-height: 245px;
+}
+//头部导航
+header{
+  p{
+    height:36px;
+    line-height: 36px;
+    a{
+      font-size: 12px;
+      color:@text-color;
+    }
+  }
+}
+//下拉菜单统一样式
+.dropdown-inner{
+  width: 446px;
+  height: 36px;
+  line-height: 34px;
+  background: @content-bg;
+  position: relative;
+  left: -18px;
+  .dropdown-toggle{
+    left: 0;
+    color: #BEBEBE;//表单中文字颜色
+    .caret{
+      color: #BEBEBE;
+      top: 8px;
+      position: relative;
+    }
+    span{
+      color: #BEBEBE;
+    }
+    li.active>a{
+      background-color: @a-color;
+    }
+    .sui-dropdown-menu>li>a:hover{
+      color: @content-bg!important;
+      background: @a-color!important;
+    }
+  }
+}
+//底部按钮
+footer{
+  border-top: 1px solid transparent;
+  a{
+    .a-btn(@a-color,@a-color,14px);
+    border-radius: 4px;
+    display: inline-block;
+    width: 70px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+  }
+  a:hover{
+    color: @content-bg;
+    background: @a-color;
+  }
+}
+//土地筛选信息
+#select{
+  //表单组
+  section{
+    div.gt{
+      height: 144px;
+    }
+    .sui-form{
+      .control-group{
+        width: 557px;
+        height: 36px;
+        .control-label{
+          text-align: left;
+          font-size: 14px;
+        }
+      }
+    }
+    .star>img{
+      position: relative;
+      left: -13px;
+      top: 5px;
+    }
+    .star-gt>img{
+      position: relative;
+      left: -13px;
+    }
+    //表单基本设置
+    input{
+      width: 446px;
+      height: 36px !important;
+      margin-left: -18px!important;
+      padding: 10px!important;
+    }
+    //每项表单组基本设置
+    div.gt{
+      width: 554px;
+    }
+    #project1{
+      width: 554px;
+      //城市筛选
+      #area1{
+        margin-right: 20px;
+        display: none;
+        position: relative;
+      }
+      .sui-form{
+        .areas>img{
+          position: relative;
+          left: -107px;
+          top: 5px;
+        }
+        .areas{
+          a{
+            right: 35px;
+          }
+          .dropdown-inner,#cityName{
+            width: 108px;
+            height: 36px;
+            margin-right: 10px;
+          }
+        }
+        .control-group{
+          height: 36px;
+        }
+      }
+    }
+    #CityID0{
+      display: none;
+      border-radius: 0 0 2px 2px;
+      position: absolute;
+      background-color: @content-bg;
+      z-index: 9;
+      max-height: 300px;
+      box-shadow: 2px 2px 0 0 rgba(0,0,0,0.1);
+      border: 1px solid #ccc;
+      left: -18px;
+      top: 40px;
+      padding: 5px 0;
+      width: 108px;
+      li{
+        height: 22px;
+        a{
+          display: block;
+          width: 100%;
+          height: 22px;
+          line-height: 22px;
+          padding-left: 8px;
+        }
+        img{
+          display: none;
+          top: 4px;
+        }
+      }
+      a:hover{
+        background: @a-color;
+        color:@content-bg;
+      }
+      li.active{
+        a{
+          color: @a-color;
+        }
+        img{
+          display: inline-block;
+        }
+      }
+    }
+  }
+  section>div.gt{
+    form{
+      position: relative;
+      left: 14px;
+    }
+  }
+  //底部按钮
+  footer{
+    margin-top: 20px;
+    a{
+      margin-right: 13px;
+    }
+  }
+}
+//土地基本信息
+#basic{
+  margin-top: -18px;
+  //表单组
+  section{
+    input{
+      position: relative;
+      left: 5px;
+    }
+    h1{
+      margin-top: -15px;
+      margin-bottom: 20px;
+    }
+    .sui-form{
+      .control-group{
+        .control-label{
+          text-align: left;
+          font-size: 14px;
+        }
+      }
+    }
+    //表单基本设置
+    input{
+      width: 402px;
+      height: 36px !important;
+      margin-left: -18px!important;
+      margin-right: 10px;
+      padding: 10px!important;
+    }
+    //每项表单组基本设置
+    div.gt{
+      width: 554px;
+      height: 225px;
+    }
+    //许可证号的样式处理
+    #permit{
+      label{
+        font-size: 12px;
+        position: relative;
+        bottom: 9px;
+      }
+      input{
+        position: relative;
+        right: -100px;
+        bottom: 36px;
+        left: 103px;
+      }
+    }
+    #project2{
+      width: 554px;
+      .sui-form{
+        .areas{
+          input{
+            width: 176px;
+            height: 36px;
+            margin-right: -3px;
+          }
+          input:first-child{
+            margin-right: 46px;
+          }
+          span{
+            position: relative;
+            right: 190px;
+          }
+        }
+        .control-group{
+          height: 36px;
+        }
+      }
+      //容积率，建筑密度输入框
+      #plotRatio1,#plotRatio2,#buildingDensity1,#buildingDensity2{
+        width: 102px;
+      }
+      //大于小于右外边距
+      span{
+        margin-right: 15px;
+      }
+    }
+    #project2{
+      input{
+        width: 388px;
+      }
+    }
+  }
+  //右侧.controls
+  #basic-gt{
+    .controls{
+      position: relative;
+      left: 9px;
+    }
+    //图片位置微调
+    img{
+      margin-left: 10px;
+    }
+  }
+}
+//土地交易信息
+#deal{
+  margin-top: -18px;
+  min-height: 500px;
+  //表单组
+  section{
+    //日期图标
+    .input-daterange img {
+      top:26px;
+    }
+    h1{
+      margin-top: -15px;
+      margin-bottom: 20px;
+    }
+    //图片的大小设置
+    .control-group>img{
+      margin-left: 2px;
+    }
+    .sui-form{
+      .control-group{
+        width: 554px;
+        height: 36px;
+        .control-label{
+          text-align: left;
+          width: 100px;
+          font-size: 14px;
+        }
+      }
+    }
+    .star-gt>img{
+      position: relative;
+      left: -13px;
+    }
+    //表单基本设置
+    input{
+      width: 446px;
+      height: 36px !important;
+      margin-left: -18px!important;
+      padding: 10px!important;
+    }
+    //每项表单组基本设置
+    div.gt{
+      min-height: 200px;
+    }
+    #project3{
+      width: 554px;
+      .sui-form{
+        .dropdown-inner{
+          left: 15px;
+        }
+      }
+      .star-gt>img{
+        left: 565px;
+        bottom: 30px;
+      }
+    }
+  }
+  //土地交易信息后三行输入框的宽度设置
+  #startingPrice,#planePrice,#margin,#dealPrice,#premiumRate,#markUp{
+    width: 402px;
+    margin-right: 5px;
+  }
+  //右侧日期选框
+  #deal-gt,#project3{
+    //日期选择框下外边距0
+    .star-gt{
+      margin-bottom: 0;
+      position: relative;
+      bottom: 10px;
+    }
+    .input-daterange{
+      width: 446px;
+    }
+  }
+  #deal-gt{
+    position: relative;
+    left: 9px;
+    bottom: 15px;
+    height: 280px;
+    //起始时间
+    .start{
+      margin-bottom: 0;
+    }
+  }
+}

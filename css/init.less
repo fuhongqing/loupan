@@ -1,0 +1,173 @@
+//总体样式设置
+@text-font:14px PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial;//文本字体与大小
+@text-color:#333333;//文本颜色
+@a-color:#ED9127;//链接颜色
+@a-hover:#DB7B0D;//链接hover颜色
+@body-bg:#F8F8F8;//body背景色
+@content-bg:#fff;//内容背景色
+@border-color:#DDDDDD;//普通边框颜色
+//默认样式重置
+body{
+  background: @body-bg;
+  font:@text-font;
+  overflow: auto;
+}
+a{
+  color:#616161;
+  text-decoration: none;
+}
+a:hover{
+  color:@a-hover;
+  text-decoration: none;
+}
+ul,ol,dl,h1,h2,h3,h4,h5,h6,p{
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+.clear:after{
+  content:'';
+  display:block;
+  clear:both;
+}
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gt{
+  float:right;
+}
+.lf{
+  float:left;
+}
+//a按钮模型
+.a-btn(@a-border,@a-text,@a-font){
+  border:1px solid @a-border;
+  color:@a-text;
+  font-size: @a-font;
+}
+//内容居中，背景
+.content{
+  margin:0 auto;
+  width:1200px;
+  min-height: 600px;
+  padding:0 20px;
+  background: @content-bg;
+}
+//输入框聚焦
+input:focus{
+  outline: none;
+}
+form.sui-form input[type="text"]{
+  font-size: 14px;
+}
+//表单placeholder文字颜色
+input::-webkit-input-placeholder{
+  color:#BEBEBE!important;
+  font-size: 14px;
+}
+input:-moz-placeholder{
+  color:#BEBEBE!important;//4-18
+  font-size: 14px;
+}
+input::-moz-placeholder{
+  color:#BEBEBE!important;//19+
+  font-size: 14px;
+}
+input:-ms-input-placeholder{
+  color:#BEBEBE!important;//10+
+  font-size: 14px;
+}
+//消除文本输入框的内阴影
+.sui-form input[type="text"]{
+  box-shadow: none;
+  color: @text-color;
+  font-family: @text-font;
+}
+//日历定位
+.datepicker{
+  cursor: pointer;
+  position: absolute;
+  width: 258px;
+  height: 258px;
+  background: @content-bg;
+  border: 1px solid @border-color;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12), 0 0 6px 0 rgba(0,0,0,0.04);
+  border-radius: 2px;
+  .table-condensed{
+    width: 258px;
+    height: 258px;
+    padding: 15px;
+  }
+  //年月
+  .datepicker-switch{
+    color: #475669;
+  }
+  //星期
+  .dow{
+    color: #8492A6;
+  }
+  .day{
+    text-align: center;
+  }
+  .today{
+    color: @content-bg;
+    background: @a-color;
+    width: 32px;
+    height: 32px;
+  }
+  .today:hover{
+    background: @a-hover;
+  }
+  .prev,.next{
+    display: block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: relative;
+  }
+  .prev{
+    border-right: 8px solid #bcbcbc;
+    left: 8px;
+  }
+  .next{
+    border-left: 8px solid #bcbcbc;
+    right: -12px;
+  }
+  //月份选择
+  .datepicker-months,.datepicker-years{
+    span{
+      display: inline-block;
+      width: 55px;
+      line-height: 5;
+    }
+    .table-condensed{
+      td{
+        position: relative;
+        left: 12px;
+      }
+    }
+  }
+}
+//日历图标样式
+.input-daterange{
+  img{
+    position: relative;
+    right: 30px;
+  }
+  .agentBegin{
+    right: 90px;
+  }
+}
+//下拉框里文本颜色
+.dropdown-inner{
+  span{
+    color:@text-color;
+    font-size: 14px;
+  }
+}
